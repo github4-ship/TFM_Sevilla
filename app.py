@@ -12,7 +12,7 @@ import numpy as np
 # =======================
 @st.cache_data
 def cargar_datos():
-    df = pd.read_csv("fans_con_score_y_cluster.csv")
+    df = pd.read_csv("CSV_Corregido_para_App.csv")
     resumen = pd.read_csv("resumen_clusters.csv")
     return df, resumen
 
