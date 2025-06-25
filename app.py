@@ -1,5 +1,3 @@
-esta asi:
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -7,7 +5,6 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
-
 
 # ========== BLOQUE 1: CARGA DE DATOS ==========
 @st.cache_data
@@ -35,8 +32,8 @@ opcion = st.sidebar.radio("Selecciona una sección:", [
     "Segmentación avanzada", 
     "Engagement Digital",
     "Despliegue Real del Fan Value Engine",
-    "Benchmarking con Clubes",
-    "Distribución y Perfilado Avanzado"
+    "Distribución Canal y Cluster",
+    "Fan Score vs Engagement"
 ])
 
 # ========== 1. RESUMEN GENERAL ==========
@@ -93,7 +90,6 @@ elif opcion == "Segmentación avanzada":
 # ========== 5. ENGAGEMENT DIGITAL ==========
 elif opcion == "Engagement Digital":
     st.header("💡 Engagement Digital")
-    st.markdown("Análisis de comportamiento y participación digital de los fans.")
 
     st.subheader("🔍 Correlación entre variables de comportamiento")
     cols_digitales = ["visitas_app", "Interacciones_RRSS", "clickrate_newsletter", "participacion_eventos"]
@@ -120,11 +116,10 @@ elif opcion == "Engagement Digital":
                               title="Relación entre Fan Score y Clickrate Newsletter")
         st.plotly_chart(fig_news, use_container_width=True)
 
-# ========== 6. ANEXO IV – PLAN DE DESPLIEGUE ==========
+# ========== 6. PLAN DE DESPLIEGUE ==========
 elif opcion == "Despliegue Real del Fan Value Engine":
-    
+    st.header("📘 Anexo IV – Plan de Despliegue")
 
-    # Gráfico Gantt
     st.subheader("📆 Calendario de Despliegue")
     despliegue = pd.DataFrame({
         "Fase": ["Integración", "Automatización", "Escalado", "Evaluación"],
@@ -133,12 +128,10 @@ elif opcion == "Despliegue Real del Fan Value Engine":
     })
     despliegue["Inicio"] = pd.to_datetime(despliegue["Inicio"])
     despliegue["Fin"] = pd.to_datetime(despliegue["Fin"])
-    fig_gantt = px.timeline(despliegue, x_start="Inicio", x_end="Fin", y="Fase", color="Fase",
-                            title="📆 Calendario de Despliegue del Fan Value Engine")
+    fig_gantt = px.timeline(despliegue, x_start="Inicio", x_end="Fin", y="Fase", color="Fase")
     fig_gantt.update_yaxes(autorange="reversed")
     st.plotly_chart(fig_gantt, use_container_width=True)
 
-    # Gráfico Funnel
     st.subheader("🚀 Funnel de Madurez del Despliegue")
     funnel = go.Figure(go.Funnel(
         y = ["Evaluación", "Escalado", "Automatización", "Integración"],
@@ -147,64 +140,40 @@ elif opcion == "Despliegue Real del Fan Value Engine":
     ))
     st.plotly_chart(funnel, use_container_width=True)
 
-    # Gráfico Radar
     st.subheader("📊 Radar de KPIs tras Despliegue")
     kpis = pd.DataFrame({
         "KPI": ["Retención", "Conversión", "Satisfacción", "ROI", "Feedback Interno"],
         "Valor": [85, 70, 90, 75, 65]
     })
-    fig_radar = px.line_polar(kpis, r="Valor", theta="KPI", line_close=True,
-                              title="📊 KPIs del Fan Value Engine")
+    fig_radar = px.line_polar(kpis, r="Valor", theta="KPI", line_close=True)
     fig_radar.update_traces(fill='toself')
     st.plotly_chart(fig_radar, use_container_width=True)
 
+# ========== 7. DISTRIBUCIÓN CANAL Y CLUSTER ==========
+elif opcion == "Distribución Canal y Cluster":
+    st.header("📡 Distribución por Canal y Cluster")
 
+    st.subheader("Distribución por Canal")
+    fig_canal = px.histogram(df_fans, x="canal", color="cluster_marketing",
+                             title="Frecuencia de Fans por Canal y Segmento")
+    st.plotly_chart(fig_canal, use_container_width=True)
 
-# ========== 7. BENCHMARKING CON CLUBES ==========
-elif opcion == "Benchmarking con Clubes":
-    st.header("🏟️ Benchmarking con Clubes Reales")
-    st.markdown("Comparativa de desempeño del Fan Value Engine respecto a clubes líderes.")
+    st.subheader("Gasto Promedio por Canal")
+    gasto_canal = df_fans.groupby("canal")["Gasto_Total_€"].mean().reset_index()
+    fig_bar = px.bar(gasto_canal, x="canal", y="Gasto_Total_€",
+                     title="Gasto Promedio por Canal")
+    st.plotly_chart(fig_bar, use_container_width=True)
 
-    # Radar Chart
-    st.subheader("📊 Comparativa de KPIs por Club")
-    df_radar = pd.DataFrame({
-        "KPI": ["Retención", "Conversión", "Satisfacción", "Madurez Digital"],
-        "Fan Value Engine": [85, 75, 88, 80],
-        "Man City": [90, 80, 85, 88],
-        "PSG": [87, 77, 83, 85],
-        "Barça": [82, 73, 80, 82],
-        "Sevilla": [78, 70, 79, 75]
-    })
+# ========== 8. FAN SCORE VS ENGAGEMENT ==========
+elif opcion == "Fan Score vs Engagement":
+    st.header("📈 Fan Score y Engagement")
 
-    for club in df_radar.columns[1:]:
-        fig_radar = px.line_polar(df_radar, r=club, theta="KPI", line_close=True, name=club)
-        fig_radar.update_traces(fill='toself')
-        fig_radar.update_layout(title_text=f"Radar KPIs – {club}")
-        st.plotly_chart(fig_radar, use_container_width=True)
+    st.subheader("Distribución Fan Score por Cluster")
+    fig_box = px.box(df_fans, x="cluster_marketing", y="Fan_Score",
+                     color="cluster_marketing", title="Fan Score por Segmento")
+    st.plotly_chart(fig_box, use_container_width=True)
 
-    # Barras Comparativas
-    st.subheader("📊 Barras Comparativas por KPI")
-    df_barras = df_radar.melt(id_vars="KPI", var_name="Club", value_name="Valor")
-    fig_barras = px.bar(df_barras, x="KPI", y="Valor", color="Club", barmode="group",
-                        title="Comparación de KPIs por Club")
-    st.plotly_chart(fig_barras, use_container_width=True)
-
-# ========== 8. DISTRIBUCIÓN Y PERFILADO AVANZADO ==========
-elif opcion == "Distribución y Perfilado Avanzado":
-    st.header("🧬 Distribución y Perfilado Avanzado")
-    st.markdown("Explora segmentaciones complejas y patrones de comportamiento.")
-
-    # SUNBURST: Canal -> Cluster
-    st.subheader("🔄 Segmentación Jerárquica por Canal y Cluster")
-    if "canal" in df_fans.columns and "cluster_marketing" in df_fans.columns:
-        df_sunburst = df_fans.groupby(["canal", "cluster_marketing"]).size().reset_index(name='fans')
-        fig_sunburst = px.sunburst(df_sunburst, path=["canal", "cluster_marketing"], values='fans',
-                                   title="Segmentación Jerárquica Canal → Cluster")
-        st.plotly_chart(fig_sunburst, use_container_width=True)
-
-    # SWARMPLOT: Fan Score vs Edad
-    st.subheader("🧬 Fan Score vs Edad por Cluster")
-    if "Fan_Score" in df_fans.columns and "edad" in df_fans.columns:
-        fig_swarm = px.strip(df_fans, x="cluster_marketing", y="Fan_Score", color="cluster_marketing",
-                             hover_data=["edad"], title="Distribución de Fan Score por Cluster")
-        st.plotly_chart(fig_swarm, use_container_width=True)
+    st.subheader("Fan Score vs Participación en Eventos")
+    fig_scatter = px.scatter(df_fans, x="Fan_Score", y="participacion_eventos",
+                             color="cluster_marketing", title="Fan Score vs Participación")
+    st.plotly_chart(fig_scatter, use_container_width=True)
