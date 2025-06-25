@@ -30,7 +30,8 @@ opcion = st.sidebar.radio("Selecciona una sección:", [
     "Clusters", 
     "Detalle por Fan", 
     "Segmentación avanzada", 
-    "Engagement Digital"   # NUEVA SECCIÓN
+    "Engagement Digital",   # NUEVA SECCIÓN
+    "Despliegue Real del Fan Value Engine"
 ])
 
 # ========== 1. RESUMEN GENERAL ==========
