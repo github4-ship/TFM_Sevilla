@@ -114,3 +114,42 @@ elif opcion == "Segmentación avanzada":
         st.plotly_chart(fig4, use_container_width=True)
     except Exception as e:
         st.error(f"Error generando el gráfico: {e}")
+
+
+# 5. Exploración Visual
+elif opcion == "📈 Exploración Visual":
+    st.header("📈 Exploración Visual")
+    st.markdown("Gráficos complementarios para entender patrones de consumo y comportamiento.")
+
+    # 1. Mapa de calor de correlaciones
+    st.subheader("🔬 Correlación entre Variables Numéricas")
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    corr = df_fans.select_dtypes(include=["float", "int"]).corr()
+    fig_corr, ax = plt.subplots(figsize=(10, 6))
+    sns.heatmap(corr, annot=True, fmt=".2f", cmap="viridis", ax=ax)
+    st.pyplot(fig_corr)
+
+    # 2. Gráfico de barras por canal
+    st.subheader("📢 Distribución de Clusters por Canal")
+    if "canal" in df_fans.columns:
+        canal_counts = df_fans.groupby(["canal", "cluster_marketing"]).size().reset_index(name="count")
+        fig_bar = px.bar(canal_counts, x="canal", y="count", color="cluster_marketing", barmode="group",
+                         title="Distribución de Clusters por Canal")
+        st.plotly_chart(fig_bar, use_container_width=True)
+
+    # 3. Gasto Promedio por Cluster
+    st.subheader("💶 Gasto Promedio por Cluster")
+    if "Gasto_Total_€" in df_fans.columns:
+        avg_gasto = df_fans.groupby("cluster_marketing")["Gasto_Total_€"].mean().reset_index()
+        fig_avg = px.bar(avg_gasto, x="cluster_marketing", y="Gasto_Total_€", color="cluster_marketing",
+                         title="Gasto Medio por Cluster")
+        st.plotly_chart(fig_avg, use_container_width=True)
+
+    # 4. Relación Edad - Gasto
+    st.subheader("👥 Edad vs Gasto Total")
+    if "edad" in df_fans.columns:
+        fig_scatter = px.scatter(df_fans, x="edad", y="Gasto_Total_€", color="cluster_marketing",
+                                 size="Compras_Ecommerce", hover_name="Fan_ID",
+                                 title="Relación entre Edad y Gasto Total")
+        st.plotly_chart(fig_scatter, use_container_width=True)
