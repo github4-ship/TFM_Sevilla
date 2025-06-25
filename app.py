@@ -1,141 +1,81 @@
-# =======================
-# BLOQUE 1: LIBRERÍAS
-# =======================
+# app.py
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 import numpy as np
 
-# =======================
-# BLOQUE 2: CARGA DE DATOS
-# =======================
+# Cargar datos
 @st.cache_data
-def cargar_datos():
-    df = pd.read_csv("CSV_Final_App.csv")
-    resumen = pd.read_csv("resumen_clusters.csv")
-    return df, resumen
 
-df_fans, resumen_clusters = cargar_datos()
+def load_data():
+    df = pd.read_csv("CSV_Corregido_para_App.csv")
+    return df
 
-# =======================
-# BLOQUE 3: ESTILO GENERAL
-# =======================
-st.set_page_config(page_title="Fan Value Engine", layout="wide")
-st.markdown("""
-    <style>
-        body { background-color: #0D0D0D; color: white; }
-        .css-1rs6os.edgvbvh3 { background-color: #0D0D0D; }
-    </style>
-""", unsafe_allow_html=True)
+df_fans = load_data()
 
-# =======================
-# BLOQUE 4: BARRA LATERAL
-# =======================
-st.sidebar.title("📊 Navegación")
-seccion = st.sidebar.radio("Selecciona una sección:", [
-    "Resumen General",
-    "Clusters",
-    "Detalle por Fan",
-    "Segmentación avanzada"
-])
+# Correcciones de tipo
+for col in df_fans.columns:
+    if df_fans[col].dtype == object:
+        df_fans[col] = df_fans[col].replace("np.int64(.*)", "", regex=True)
+        df_fans[col] = df_fans[col].replace("N/A", np.nan)
 
-# =======================
-# BLOQUE 5: RESUMEN GENERAL
-# =======================
-if seccion == "Resumen General":
-    st.title("📈 Análisis General de la Base de Fans")
+# Configuración de página
+st.set_page_config(page_title="Segmentación Avanzada", layout="wide")
+st.title("Segementación Avanzada")
 
-    col1, col2 = st.columns(2)
-    col1.metric("Total Fans", len(df_fans))
-    col2.metric("Fan Score Medio", round(df_fans["Fan_Score"].mean(), 2))
+# Sidebar navegación
+st.sidebar.title("🔄 Navegación")
+opcion = st.sidebar.radio("Selecciona una sección:", [
+    "Resumen General", "Clusters", "Detalle por Fan", "Segmentación avanzada"])
 
-    st.subheader("🎯 Distribución por Nivel de Fan")
-    fig1 = px.histogram(df_fans, x="Nivel_Fan", color="Nivel_Fan", title="Distribución de Segmentos")
+# 1. Resumen General
+if opcion == "Resumen General":
+    st.header("🔹 Distribución por Nivel de Fan")
+    fig1 = px.histogram(df_fans, x="cluster_marketing", color="cluster_marketing",
+                        color_discrete_sequence=px.colors.qualitative.Set1,
+                        labels={"cluster_marketing": "Nivel_Fan"},
+                        title="Distribución de Segmentos")
     st.plotly_chart(fig1, use_container_width=True)
 
-    st.subheader("🧠 Engagement Digital (GA4)")
-    fig2 = px.box(df_fans, x="Nivel_Fan", y="Engagement_GA4", color="Nivel_Fan")
-    st.plotly_chart(fig2, use_container_width=True)
+# 2. Clusters
+elif opcion == "Clusters":
+    st.header("🧠 Engagement Digital (GA4)")
+    if "visitas_app" in df_fans.columns:
+        fig2 = px.box(df_fans, y="visitas_app", color="cluster_marketing",
+                     color_discrete_sequence=px.colors.qualitative.Pastel,
+                     title="Distribución de Visitas App por Cluster")
+        st.plotly_chart(fig2, use_container_width=True)
 
-    st.subheader("🛍️ Gasto Total por Nivel de Fan")
-    fig3 = px.box(df_fans, x="Nivel_Fan", y="Gasto_Total_€", color="Nivel_Fan")
-    st.plotly_chart(fig3, use_container_width=True)
-
-# =======================
-# BLOQUE 6: CLUSTERS
-# =======================
-elif seccion == "Clusters":
-    st.title("🔬 Segmentación por Clusters")
-
-    st.dataframe(resumen_clusters)
-
-    st.subheader("💡 Radar Comparativo de Métricas")
-
-    cluster_id = st.selectbox("Selecciona un cluster", resumen_clusters["Cluster"].unique())
-    metrics = ["Fan_Score", "Frecuencia_Visitas_Web", "Interacciones_RRSS",
-               "Compras_Ecommerce", "Gasto_Total_€", "Miembro_Programa_Fidelidad"]
-
-    cluster_vals = resumen_clusters[resumen_clusters["Cluster"] == cluster_id][metrics].values.flatten()
-    max_vals = resumen_clusters[metrics].max().values
-    norm_vals = cluster_vals / max_vals
-
-    fig_radar = go.Figure(data=go.Scatterpolar(
-        r=norm_vals,
-        theta=metrics,
-        fill='toself',
-        name=f'Cluster {cluster_id}',
-        line=dict(color='#00F5A0')
-    ))
-    fig_radar.update_layout(polar=dict(bgcolor="#0D0D0D"), showlegend=False)
-    st.plotly_chart(fig_radar, use_container_width=True)
-
-# =======================
-# BLOQUE 7: DETALLE INDIVIDUAL
-# =======================
-elif seccion == "Detalle por Fan":
-    st.title("👤 Análisis Individual")
-
+# 3. Detalle por Fan
+elif opcion == "Detalle por Fan":
+    st.header(":busts_in_silhouette: Análisis Individual")
     fan_id = st.selectbox("Selecciona un Fan_ID", df_fans["Fan_ID"].unique())
-    fan = df_fans[df_fans["Fan_ID"] == fan_id].iloc[0]
+    fan_data = df_fans[df_fans["Fan_ID"] == fan_id].squeeze()
 
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Fan Score", round(fan["Fan_Score"], 2))
-    col2.metric("Nivel", fan.get("Nivel_Fan", "N/A"))
-    col3.metric("Cluster", fan.get("Cluster", "N/A"))
+    st.metric("Fan Score", f"{fan_data['Fan_Score']:.2f}")
+    st.metric("Nivel", fan_data.get("cluster_marketing", "N/A"))
 
-    st.subheader("⚙️ Métricas Avanzadas")
-    st.json({
-        "Edad": fan.get("Edad", "N/A"),
-        "Localidad": fan.get("Localidad", "N/A"),
-        "Canal": fan.get("Canal", "N/A"),
-        "Visitas App": fan.get("Frecuencia_Visitas_Web", "N/A"),
-        "Interacciones en RRSS": fan.get("Interacciones_RRSS", "N/A"),
-        "Clickrate Newsletter": fan.get("Clickrate_Newsletter", "N/A"),
-        "Compras Totales": fan.get("Compras_Ecommerce", "N/A"),
-        "Participación en Eventos": fan.get("Participacion_Eventos", "N/A"),
-        "Miembro Programa Fidelidad": fan.get("Miembro_Programa_Fidelidad", "N/A"),
-        "Gasto Total (€)": fan.get("Gasto_Total_€", "N/A"),
-        "Fan Segment": fan.get("cluster_marketing", "N/A")
-    })
+    st.subheader(":gear: Métricas Avanzadas")
+    cols_advanced = ["edad", "localidad", "canal", "visitas_app", "Interacciones_RRSS", 
+                     "clickrate_newsletter", "Compras_Ecommerce", "participacion_eventos", 
+                     "Miembro_Programa_Fidelidad", "Gasto_Total_€"]
+    dict_metrica = {col: fan_data.get(col, "N/A") for col in cols_advanced}
+    st.json(dict_metrica)
 
-# =======================
-# BLOQUE 8: SEGMENTACIÓN AVANZADA
-# =======================
-elif seccion == "Segmentación avanzada":
-    st.title("🎯 Segmentación Avanzada")
+# 4. Segmentación avanzada
+elif opcion == "Segmentación avanzada":
+    st.header(":dart: Segmentación Avanzada")
+    st.markdown("Explora relaciones entre dos métricas para detectar patrones por tipo de fan.")
 
-    st.write("Explora relaciones entre dos métricas para detectar patrones por tipo de fan.")
+    col1, col2 = st.columns(2)
+    x_axis = col1.selectbox("Variable en eje X", df_fans.columns, index=df_fans.columns.get_loc("Fan_Score"))
+    y_axis = col2.selectbox("Variable en eje Y", df_fans.columns, index=df_fans.columns.get_loc("Gasto_Total_€"))
 
-    col_x, col_y = st.columns(2)
-    metricas_disp = df_fans.select_dtypes(include=["float", "int"]).columns.tolist()
-
-    x_axis = col_x.selectbox("Variable en eje X", metricas_disp, index=metricas_disp.index("Fan_Score"))
-    y_axis = col_y.selectbox("Variable en eje Y", metricas_disp, index=metricas_disp.index("Gasto_Total_€"))
-
-    fig4 = px.scatter(df_fans, x=x_axis, y=y_axis, color="cluster_marketing",
-                      size="Compras_Ecommerce", hover_name="Fan_ID",
-                      title=f"Relación entre {x_axis} y {y_axis}",
-                      color_discrete_sequence=px.colors.qualitative.Antique)
-
-    st.plotly_chart(fig4, use_container_width=True)
+    try:
+        fig4 = px.scatter(df_fans, x=x_axis, y=y_axis, color="cluster_marketing",
+                          size="Compras_Ecommerce", hover_name="Fan_ID",
+                          title=f"Relación entre {x_axis} y {y_axis}",
+                          color_discrete_sequence=px.colors.qualitative.Antique)
+        st.plotly_chart(fig4, use_container_width=True)
+    except Exception as e:
+        st.error(f"Error generando el gráfico: {e}")
