@@ -1,11 +1,12 @@
-# app_CON_Radar.py
+# app.py
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
 import numpy as np
+import plotly.express as px
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-# Cargar datos
+# ========== BLOQUE 1: CARGA DE DATOS ==========
 @st.cache_data
 def load_data():
     df = pd.read_csv("CSV_Corregido_para_App.csv")
@@ -13,93 +14,61 @@ def load_data():
 
 df_fans = load_data()
 
-# Correcciones de tipo
+# Limpiar campos de texto problemáticos
 for col in df_fans.columns:
     if df_fans[col].dtype == object:
         df_fans[col] = df_fans[col].replace("np.int64(.*)", "", regex=True)
         df_fans[col] = df_fans[col].replace("N/A", np.nan)
 
-# Convertir numéricos donde aplique
-numericas = ["Fan_Score", "visitas_app", "Interacciones_RRSS", "Compras_Ecommerce", "Gasto_Total_€"]
-for col in numericas:
-    df_fans[col] = pd.to_numeric(df_fans[col], errors="coerce")
+# ========== BLOQUE 2: CONFIGURACIÓN GENERAL ==========
+st.set_page_config(page_title="Fan Value Engine", layout="wide")
+st.title("🚀 Fan Value Engine")
 
-# Configuración de página
-st.set_page_config(page_title="Segmentación Avanzada", layout="wide")
-st.title("Segementación Avanzada")
-
-# Sidebar navegación
 st.sidebar.title("🔄 Navegación")
 opcion = st.sidebar.radio("Selecciona una sección:", [
-    "Resumen General", "Clusters", "Detalle por Fan", "Segmentación avanzada"])
+    "Resumen General", 
+    "Clusters", 
+    "Detalle por Fan", 
+    "Segmentación avanzada", 
+    "Engagement Digital"   # NUEVA SECCIÓN
+])
 
-# 1. Resumen General
+# ========== 1. RESUMEN GENERAL ==========
 if opcion == "Resumen General":
-    st.header("🔹 Distribución por Nivel de Fan")
+    st.header("📊 Distribución por Nivel de Fan")
     fig1 = px.histogram(df_fans, x="cluster_marketing", color="cluster_marketing",
                         color_discrete_sequence=px.colors.qualitative.Set1,
-                        labels={"cluster_marketing": "Nivel_Fan"},
                         title="Distribución de Segmentos")
     st.plotly_chart(fig1, use_container_width=True)
 
-# 2. Clusters
+# ========== 2. CLUSTERS ==========
 elif opcion == "Clusters":
-    st.header("🧠 Engagement Digital (GA4)")
+    st.header("🧠 Visitas a App por Cluster")
     if "visitas_app" in df_fans.columns:
         fig2 = px.box(df_fans, y="visitas_app", color="cluster_marketing",
                      color_discrete_sequence=px.colors.qualitative.Pastel,
                      title="Distribución de Visitas App por Cluster")
         st.plotly_chart(fig2, use_container_width=True)
 
-# 3. Detalle por Fan
+# ========== 3. DETALLE POR FAN ==========
 elif opcion == "Detalle por Fan":
-    st.header(":busts_in_silhouette: Análisis Individual")
+    st.header("👤 Análisis Individual")
     fan_id = st.selectbox("Selecciona un Fan_ID", df_fans["Fan_ID"].unique())
     fan_data = df_fans[df_fans["Fan_ID"] == fan_id].squeeze()
 
     st.metric("Fan Score", f"{fan_data['Fan_Score']:.2f}")
     st.metric("Nivel", fan_data.get("cluster_marketing", "N/A"))
 
-    st.subheader(":gear: Métricas Avanzadas")
+    st.subheader("⚙️ Métricas Avanzadas")
     cols_advanced = ["edad", "localidad", "canal", "visitas_app", "Interacciones_RRSS", 
                      "clickrate_newsletter", "Compras_Ecommerce", "participacion_eventos", 
                      "Miembro_Programa_Fidelidad", "Gasto_Total_€"]
     dict_metrica = {col: fan_data.get(col, "N/A") for col in cols_advanced}
     st.json(dict_metrica)
 
-    # ➕ Añadir radar chart
-    st.subheader("📊 Perfil Comparado (Radar)")
-    radar_cols = ["Fan_Score", "visitas_app", "Interacciones_RRSS", "Compras_Ecommerce", "Gasto_Total_€"]
-    valores_fan = fan_data[radar_cols].values.astype(float)
-
-    if not np.isnan(valores_fan).any():
-        maximos = df_fans[radar_cols].max()
-        normales = valores_fan / maximos
-
-        fig_radar = go.Figure()
-        fig_radar.add_trace(go.Scatterpolar(
-            r=normales,
-            theta=radar_cols,
-            fill='toself',
-            name=f"Fan {fan_id}",
-            line_color='gold'
-        ))
-
-        fig_radar.update_layout(
-            polar=dict(
-                radialaxis=dict(visible=True, range=[0, 1], showticklabels=False),
-            ),
-            showlegend=False,
-            template="plotly_dark",
-            height=400
-        )
-        st.plotly_chart(fig_radar, use_container_width=True)
-    else:
-        st.warning("Datos insuficientes para mostrar radar.")
-
-# 4. Segmentación avanzada
+# ========== 4. SEGMENTACIÓN AVANZADA ==========
 elif opcion == "Segmentación avanzada":
-    st.header(":dart: Segmentación Avanzada")
+    st.header("📈 Segmentación Avanzada")
     st.markdown("Explora relaciones entre dos métricas para detectar patrones por tipo de fan.")
 
     col1, col2 = st.columns(2)
@@ -115,41 +84,36 @@ elif opcion == "Segmentación avanzada":
     except Exception as e:
         st.error(f"Error generando el gráfico: {e}")
 
+# ========== 5. ENGAGEMENT DIGITAL ==========
+elif opcion == "Engagement Digital":
+    st.header("💡 Engagement Digital")
+    st.markdown("Análisis de comportamiento y participación digital de los fans.")
 
-# 5. Exploración Visual
-elif opcion == "📈 Exploración Visual":
-    st.header("📈 Exploración Visual")
-    st.markdown("Gráficos complementarios para entender patrones de consumo y comportamiento.")
-
-    # 1. Mapa de calor de correlaciones
-    st.subheader("🔬 Correlación entre Variables Numéricas")
-    import seaborn as sns
-    import matplotlib.pyplot as plt
-    corr = df_fans.select_dtypes(include=["float", "int"]).corr()
-    fig_corr, ax = plt.subplots(figsize=(10, 6))
-    sns.heatmap(corr, annot=True, fmt=".2f", cmap="viridis", ax=ax)
+    # 1. Mapa de calor de correlaciones entre métricas digitales
+    st.subheader("🔍 Correlación entre variables de comportamiento")
+    cols_digitales = ["visitas_app", "Interacciones_RRSS", "clickrate_newsletter", "participacion_eventos"]
+    corr_matrix = df_fans[cols_digitales].corr()
+    fig_corr, ax = plt.subplots(figsize=(8, 5))
+    sns.heatmap(corr_matrix, annot=True, cmap="Blues", fmt=".2f", ax=ax)
     st.pyplot(fig_corr)
 
-    # 2. Gráfico de barras por canal
-    st.subheader("📢 Distribución de Clusters por Canal")
-    if "canal" in df_fans.columns:
-        canal_counts = df_fans.groupby(["canal", "cluster_marketing"]).size().reset_index(name="count")
-        fig_bar = px.bar(canal_counts, x="canal", y="count", color="cluster_marketing", barmode="group",
-                         title="Distribución de Clusters por Canal")
-        st.plotly_chart(fig_bar, use_container_width=True)
+    # 2. Interacciones por cluster
+    st.subheader("📲 Interacciones en RRSS por Cluster")
+    if "Interacciones_RRSS" in df_fans.columns:
+        fig_rrss = px.box(df_fans, x="cluster_marketing", y="Interacciones_RRSS", color="cluster_marketing",
+                          title="Distribución de Interacciones en RRSS")
+        st.plotly_chart(fig_rrss, use_container_width=True)
 
-    # 3. Gasto Promedio por Cluster
-    st.subheader("💶 Gasto Promedio por Cluster")
-    if "Gasto_Total_€" in df_fans.columns:
-        avg_gasto = df_fans.groupby("cluster_marketing")["Gasto_Total_€"].mean().reset_index()
-        fig_avg = px.bar(avg_gasto, x="cluster_marketing", y="Gasto_Total_€", color="cluster_marketing",
-                         title="Gasto Medio por Cluster")
-        st.plotly_chart(fig_avg, use_container_width=True)
+    # 3. Participación en eventos por edad
+    st.subheader("🎟️ Participación en Eventos por Edad")
+    if "participacion_eventos" in df_fans.columns:
+        fig_eventos = px.scatter(df_fans, x="edad", y="participacion_eventos", color="cluster_marketing",
+                                 title="Relación Edad vs Participación en Eventos")
+        st.plotly_chart(fig_eventos, use_container_width=True)
 
-    # 4. Relación Edad - Gasto
-    st.subheader("👥 Edad vs Gasto Total")
-    if "edad" in df_fans.columns:
-        fig_scatter = px.scatter(df_fans, x="edad", y="Gasto_Total_€", color="cluster_marketing",
-                                 size="Compras_Ecommerce", hover_name="Fan_ID",
-                                 title="Relación entre Edad y Gasto Total")
-        st.plotly_chart(fig_scatter, use_container_width=True)
+    # 4. Clickrate Newsletter vs Fan Score
+    st.subheader("📧 Clickrate Newsletter vs Fan Score")
+    if "clickrate_newsletter" in df_fans.columns:
+        fig_news = px.scatter(df_fans, x="Fan_Score", y="clickrate_newsletter", color="cluster_marketing",
+                              title="Relación entre Fan Score y Clickrate Newsletter")
+        st.plotly_chart(fig_news, use_container_width=True)
