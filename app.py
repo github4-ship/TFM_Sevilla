@@ -1,3 +1,5 @@
+esta asi:
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -31,7 +33,9 @@ opcion = st.sidebar.radio("Selecciona una sección:", [
     "Detalle por Fan", 
     "Segmentación avanzada", 
     "Engagement Digital",
-    "Despliegue Real del Fan Value Engine"
+    "Despliegue Real del Fan Value Engine",
+    "Benchmarking con Clubes",
+    "Distribución y Perfilado Avanzado"
 ])
 
 # ========== 1. RESUMEN GENERAL ==========
@@ -152,3 +156,54 @@ elif opcion == "Despliegue Real del Fan Value Engine":
                               title="📊 KPIs del Fan Value Engine")
     fig_radar.update_traces(fill='toself')
     st.plotly_chart(fig_radar, use_container_width=True)
+
+
+
+# ========== 7. BENCHMARKING CON CLUBES ==========
+elif opcion == "Benchmarking con Clubes":
+    st.header("🏟️ Benchmarking con Clubes Reales")
+    st.markdown("Comparativa de desempeño del Fan Value Engine respecto a clubes líderes.")
+
+    # Radar Chart
+    st.subheader("📊 Comparativa de KPIs por Club")
+    df_radar = pd.DataFrame({
+        "KPI": ["Retención", "Conversión", "Satisfacción", "Madurez Digital"],
+        "Fan Value Engine": [85, 75, 88, 80],
+        "Man City": [90, 80, 85, 88],
+        "PSG": [87, 77, 83, 85],
+        "Barça": [82, 73, 80, 82],
+        "Sevilla": [78, 70, 79, 75]
+    })
+
+    for club in df_radar.columns[1:]:
+        fig_radar = px.line_polar(df_radar, r=club, theta="KPI", line_close=True, name=club)
+        fig_radar.update_traces(fill='toself')
+        fig_radar.update_layout(title_text=f"Radar KPIs – {club}")
+        st.plotly_chart(fig_radar, use_container_width=True)
+
+    # Barras Comparativas
+    st.subheader("📊 Barras Comparativas por KPI")
+    df_barras = df_radar.melt(id_vars="KPI", var_name="Club", value_name="Valor")
+    fig_barras = px.bar(df_barras, x="KPI", y="Valor", color="Club", barmode="group",
+                        title="Comparación de KPIs por Club")
+    st.plotly_chart(fig_barras, use_container_width=True)
+
+# ========== 8. DISTRIBUCIÓN Y PERFILADO AVANZADO ==========
+elif opcion == "Distribución y Perfilado Avanzado":
+    st.header("🧬 Distribución y Perfilado Avanzado")
+    st.markdown("Explora segmentaciones complejas y patrones de comportamiento.")
+
+    # SUNBURST: Canal -> Cluster
+    st.subheader("🔄 Segmentación Jerárquica por Canal y Cluster")
+    if "canal" in df_fans.columns and "cluster_marketing" in df_fans.columns:
+        df_sunburst = df_fans.groupby(["canal", "cluster_marketing"]).size().reset_index(name='fans')
+        fig_sunburst = px.sunburst(df_sunburst, path=["canal", "cluster_marketing"], values='fans',
+                                   title="Segmentación Jerárquica Canal → Cluster")
+        st.plotly_chart(fig_sunburst, use_container_width=True)
+
+    # SWARMPLOT: Fan Score vs Edad
+    st.subheader("🧬 Fan Score vs Edad por Cluster")
+    if "Fan_Score" in df_fans.columns and "edad" in df_fans.columns:
+        fig_swarm = px.strip(df_fans, x="cluster_marketing", y="Fan_Score", color="cluster_marketing",
+                             hover_data=["edad"], title="Distribución de Fan Score por Cluster")
+        st.plotly_chart(fig_swarm, use_container_width=True)
