@@ -37,7 +37,7 @@ seccion = st.sidebar.radio("Selecciona una sección:", [
     "Resumen General",
     "Clusters",
     "Detalle por Fan",
-    "Segmentación avanzada"  # Nuevo apartado
+    "Segmentación avanzada"
 ])
 
 # =======================
@@ -51,16 +51,17 @@ if seccion == "Resumen General":
     col2.metric("Fan Score Medio", round(df_fans["Fan_Score"].mean(), 2))
     col3.metric("Prob. Media de Churn", f'{df_fans["Prob_Churn"].mean():.2%}')
 
-    st.subheader("🎯 Distribución por Nivel de Fan")
-    fig1 = px.histogram(df_fans, x="Nivel_Fan", color="Nivel_Fan", title="Distribución de Segmentos")
+    st.subheader("🎯 Distribución por Clúster")
+    fig1 = px.histogram(df_fans, x="cluster_marketing", color="cluster_marketing",
+                        title="Distribución de Segmentos", color_discrete_sequence=px.colors.qualitative.Set2)
     st.plotly_chart(fig1, use_container_width=True)
 
     st.subheader("🧠 Engagement Digital (GA4)")
-    fig2 = px.box(df_fans, x="Nivel_Fan", y="Engagement_GA4", color="Nivel_Fan")
+    fig2 = px.box(df_fans, x="cluster_marketing", y="Engagement_GA4", color="cluster_marketing")
     st.plotly_chart(fig2, use_container_width=True)
 
-    st.subheader("🛍️ Gasto Total por Nivel de Fan")
-    fig3 = px.box(df_fans, x="Nivel_Fan", y="Gasto_Total_€", color="Nivel_Fan")
+    st.subheader("🛍️ Gasto Total por Cluster")
+    fig3 = px.box(df_fans, x="cluster_marketing", y="Gasto_Total_€", color="cluster_marketing")
     st.plotly_chart(fig3, use_container_width=True)
 
 # =======================
@@ -102,23 +103,22 @@ elif seccion == "Detalle por Fan":
 
     col1, col2, col3 = st.columns(3)
     col1.metric("Fan Score", round(fan["Fan_Score"], 2))
-    col2.metric("Nivel", fan["Nivel_Fan"])
-    col3.metric("Cluster", fan["Cluster"])
+    col2.metric("Edad", fan["Edad"])
+    col3.metric("Cluster", fan["cluster_marketing"])
 
     st.subheader("⚙️ Métricas Avanzadas")
     st.json({
-        "Edad": fan["Edad"],
         "Localidad": fan["Localidad"],
         "Canal": fan["Canal"],
         "Visitas App": fan["Frecuencia_Visitas_Web"],
         "Interacciones en RRSS": fan["Interacciones_RRSS"],
-        "Clickrate Newsletter": fan["Clickrate_Newsletter"],
+        "Clickrate Newsletter": fan["clickrate_newsletter"],
         "Compras Totales": fan["Compras_Ecommerce"],
-        "Participación en Eventos": fan["Participacion_Eventos"]
+        "Participación en Eventos": fan["participacion_eventos"]
     })
 
 # =======================
-# BLOQUE 8: SEGMENTACIÓN AVANZADA (nuevo)
+# BLOQUE 8: SEGMENTACIÓN AVANZADA
 # =======================
 elif seccion == "Segmentación avanzada":
     st.title("🎯 Segmentación Avanzada")
@@ -131,13 +131,9 @@ elif seccion == "Segmentación avanzada":
     x_axis = col_x.selectbox("Variable en eje X", metricas_disp, index=metricas_disp.index("Fan_Score"))
     y_axis = col_y.selectbox("Variable en eje Y", metricas_disp, index=metricas_disp.index("Gasto_Total_€"))
 
-    fig4 = px.scatter(df_fans, x=x_axis, y=y_axis, color="Nivel_Fan",
+    fig4 = px.scatter(df_fans, x=x_axis, y=y_axis, color="cluster_marketing",
                       size="Compras_Ecommerce", hover_name="Fan_ID",
                       title=f"Relación entre {x_axis} y {y_axis}",
                       color_discrete_sequence=px.colors.qualitative.Antique)
 
     st.plotly_chart(fig4, use_container_width=True)
-
-# =======================
-# FIN
-# =======================
