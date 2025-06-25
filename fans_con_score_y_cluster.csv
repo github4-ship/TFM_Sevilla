@@ -1,0 +1,501 @@
+fan_id,edad,sexo,localidad,canal,visitas_app,visitas_web,tiempo_medio_sesion_min,rebote_pct,interacciones_redes,uso_newsletter,clickrate_newsletter,compras_total,gasto_total,frecuencia_compra_mensual,categoria_fav,conversion_entrada,conversion_merch,conversion_abono,clicks_banner,antiguedad_anios,miembro_fidelidad,uso_app_oficial,participacion_eventos,cluster_marketing
+1,54,Hombre,España,B2C,7,6,1.6,0.57,17,0,0.18,1,73.73,0.95,Merchandising,0,1,0,13,6,0,0,2,Fiel Tradicional
+2,67,Mujer,Andalucía,B2C,5,7,3.7,0.72,20,1,0.74,3,66.65,0.19,Abonos,0,0,0,15,4,0,0,0,Corporativo
+3,44,Hombre,España,B2B,4,9,3.6,0.42,24,1,0.25,0,109.16,0.72,Digital,0,0,0,4,13,0,0,0,Fiel Tradicional
+4,30,Hombre,Sevilla,B2B,6,16,4.9,0.52,22,1,0.45,0,137.8,2.56,Abonos,0,0,0,9,14,0,0,1,Corporativo
+5,58,Mujer,Sevilla,B2C,8,10,4.1,0.23,28,0,0.39,2,45.87,0.66,Merchandising,0,0,0,16,7,1,0,1,Joven Digital
+6,23,Mujer,Sevilla,B2C,4,12,4.9,0.66,23,1,0.98,5,87.74,2.2,Entradas,0,0,0,12,8,1,0,3,Fiel Tradicional
+7,36,Hombre,Sevilla,B2C,3,12,5.1,0.78,16,1,0.39,1,42.41,1.07,Entradas,0,0,0,15,4,0,0,1,Joven Digital
+8,54,Mujer,Andalucía,B2C,2,14,7.2,0.29,26,1,0.08,1,90.05,0.26,Entradas,0,1,0,8,7,0,0,2,Internacional Ocasional
+9,34,Hombre,Sevilla,B2C,3,7,3.5,0.45,28,1,0.09,2,51.65,1.04,Digital,0,0,0,3,12,1,0,2,Joven Digital
+10,38,Mujer,Andalucía,B2C,9,10,2.6,0.16,20,0,0.59,2,111.35,0.85,Merchandising,0,0,1,15,0,0,0,3,Fiel Tradicional
+11,26,Hombre,Internacional,B2C,5,7,4.4,0.49,24,1,0.6,1,72.0,0.61,Abonos,0,1,0,10,0,0,0,1,Joven Digital
+12,26,Mujer,Sevilla,B2C,4,13,2.8,0.45,29,1,0.42,0,76.39,0.15,Abonos,0,0,0,6,6,0,0,1,Fiel Tradicional
+13,39,Hombre,Andalucía,B2C,7,9,6.2,0.2,22,0,0.43,3,123.93,0.65,Abonos,0,0,0,16,14,0,0,0,Corporativo
+14,68,Hombre,España,B2C,8,16,3.6,0.41,14,1,0.05,1,53.01,0.09,Abonos,0,0,0,12,5,0,0,2,Internacional Ocasional
+15,51,Hombre,Sevilla,B2C,4,9,3.2,0.33,15,0,0.52,1,95.55,0.12,Digital,0,0,0,3,4,1,0,0,Joven Digital
+16,55,Mujer,Andalucía,B2C,4,12,3.3,0.47,18,1,0.5,1,56.0,0.65,Digital,0,0,0,13,13,1,0,3,Internacional Ocasional
+17,39,Hombre,España,B2B,8,11,5.1,0.51,22,0,0.15,2,110.89,0.44,Merchandising,0,0,0,9,14,0,0,1,Joven Digital
+18,18,Hombre,Internacional,B2C,5,10,3.8,0.11,20,1,0.1,2,128.6,3.12,Abonos,1,1,0,9,4,0,1,0,Fiel Tradicional
+19,37,Mujer,Sevilla,B2C,5,9,3.0,0.63,21,1,0.12,2,67.11,0.57,Entradas,1,1,0,9,13,0,1,3,Joven Digital
+20,68,Mujer,Internacional,B2C,6,12,6.5,0.6,21,1,0.1,0,9.18,1.7,Digital,0,0,0,11,8,0,1,3,Internacional Ocasional
+21,17,Hombre,Andalucía,B2C,7,9,2.7,0.36,18,1,0.61,3,54.36,0.91,Merchandising,0,0,0,1,0,0,0,2,Joven Digital
+22,39,Hombre,Sevilla,B2B,2,7,4.1,0.14,19,1,0.2,4,147.98,1.46,Merchandising,0,0,0,8,7,0,0,0,Internacional Ocasional
+23,59,Mujer,Andalucía,B2C,1,15,5.0,0.63,22,0,0.25,1,57.24,0.36,Digital,1,0,0,4,1,0,1,0,Internacional Ocasional
+24,45,Mujer,Internacional,B2C,7,14,1.6,0.77,22,1,0.17,5,128.13,3.41,Entradas,0,0,0,7,6,0,0,1,Fiel Tradicional
+25,53,Mujer,Andalucía,B2C,5,17,4.7,0.27,17,1,0.96,2,56.81,0.91,Entradas,1,0,0,13,5,0,1,2,Corporativo
+26,17,Mujer,Sevilla,B2B,4,8,2.4,0.33,23,1,0.85,1,56.07,2.14,Abonos,0,0,0,6,9,1,0,1,Corporativo
+27,36,Mujer,Andalucía,B2B,4,10,5.2,0.23,18,0,0.23,3,98.38,0.55,Digital,0,1,0,6,1,0,0,2,Joven Digital
+28,48,Hombre,Sevilla,B2C,3,7,2.6,0.5,25,1,0.33,2,94.78,0.13,Entradas,0,0,0,8,11,1,1,0,Internacional Ocasional
+29,27,Mujer,Sevilla,B2C,8,8,5.0,0.21,31,1,0.21,1,100.57,1.34,Digital,0,1,0,2,12,0,0,4,Fiel Tradicional
+30,37,Hombre,Sevilla,B2C,7,6,5.7,0.35,17,1,0.49,2,75.15,0.01,Merchandising,0,1,0,13,2,0,0,2,Corporativo
+31,59,Hombre,Sevilla,B2B,1,8,5.3,0.59,26,0,0.02,1,106.03,0.77,Merchandising,0,0,0,16,3,0,0,3,Fiel Tradicional
+32,40,Hombre,Sevilla,B2C,2,11,4.4,0.49,19,0,0.67,4,103.85,0.26,Merchandising,0,1,0,17,6,0,0,1,Fiel Tradicional
+33,64,Mujer,Sevilla,B2B,4,6,3.7,0.37,20,1,0.52,3,109.47,1.18,Digital,1,1,0,11,7,0,0,1,Internacional Ocasional
+34,42,Hombre,Andalucía,B2C,6,8,3.1,0.39,24,0,0.9,3,56.29,4.66,Abonos,0,0,0,13,12,1,0,2,Joven Digital
+35,57,Hombre,Sevilla,B2C,4,17,6.2,0.49,23,1,0.16,5,106.01,0.75,Abonos,0,0,0,12,10,1,1,2,Internacional Ocasional
+36,43,Mujer,Sevilla,B2C,6,14,3.0,0.1,27,0,0.8,1,59.36,2.04,Entradas,0,0,0,13,1,0,1,3,Corporativo
+37,31,Hombre,España,B2C,8,12,2.4,0.15,20,1,0.79,3,70.29,0.85,Digital,0,1,0,8,7,0,0,0,Corporativo
+38,30,Hombre,Andalucía,B2C,7,12,5.0,0.72,19,0,0.13,3,69.67,0.82,Abonos,0,0,0,18,10,0,1,1,Fiel Tradicional
+39,62,Mujer,Andalucía,B2C,5,14,2.8,0.15,12,1,0.4,5,45.06,3.2,Digital,0,0,1,1,8,0,0,2,Internacional Ocasional
+40,66,Hombre,Sevilla,B2C,2,10,2.6,0.59,18,1,0.17,2,22.93,2.65,Abonos,0,0,1,10,6,0,0,1,Internacional Ocasional
+41,59,Hombre,Sevilla,B2C,1,9,1.8,0.74,17,0,0.25,0,111.71,1.85,Merchandising,0,0,1,16,0,0,1,2,Fiel Tradicional
+42,67,Hombre,Sevilla,B2C,7,14,3.3,0.29,22,0,0.26,2,53.93,0.42,Merchandising,0,0,0,1,5,0,1,2,Joven Digital
+43,18,Mujer,Sevilla,B2C,4,7,3.9,0.36,20,0,0.56,4,66.91,0.94,Entradas,0,1,0,18,7,0,1,1,Fiel Tradicional
+44,52,Mujer,Sevilla,B2B,1,10,4.4,0.5,26,1,0.41,1,53.08,0.3,Merchandising,1,0,0,6,4,0,0,1,Fiel Tradicional
+45,66,Mujer,Sevilla,B2B,6,10,5.4,0.72,22,1,0.95,4,67.3,0.7,Abonos,0,1,0,17,11,0,0,1,Corporativo
+46,22,Hombre,Sevilla,B2B,5,12,4.8,0.76,29,1,0.13,2,59.82,0.79,Entradas,0,1,0,12,14,0,1,1,Internacional Ocasional
+47,36,Hombre,Sevilla,B2B,8,9,3.7,0.62,24,1,0.97,1,113.37,2.14,Entradas,0,0,0,4,1,1,0,4,Corporativo
+48,24,Mujer,Andalucía,B2C,5,12,3.7,0.16,28,1,0.23,2,57.28,2.72,Merchandising,1,0,1,17,14,0,1,2,Fiel Tradicional
+49,54,Hombre,Sevilla,B2C,4,9,4.8,0.57,24,0,0.77,2,126.44,0.64,Digital,0,1,0,15,4,1,0,3,Internacional Ocasional
+50,33,Hombre,Sevilla,B2C,10,12,5.9,0.39,19,0,0.34,2,109.18,0.02,Merchandising,0,1,0,14,7,1,1,0,Fiel Tradicional
+51,19,Mujer,Andalucía,B2C,7,8,4.2,0.43,24,0,0.14,3,60.77,2.37,Merchandising,0,0,0,7,1,1,0,1,Fiel Tradicional
+52,40,Mujer,Andalucía,B2C,4,16,3.3,0.13,17,1,0.86,4,84.59,0.23,Entradas,0,0,0,14,0,1,0,1,Joven Digital
+53,29,Hombre,Sevilla,B2C,8,13,2.5,0.23,20,1,0.31,2,90.58,1.17,Merchandising,1,0,0,0,14,0,0,1,Corporativo
+54,65,Hombre,España,B2C,5,6,1.8,0.65,17,0,0.66,0,100.25,0.03,Abonos,0,1,0,16,3,1,1,2,Corporativo
+55,24,Hombre,Andalucía,B2C,5,9,5.0,0.42,23,1,0.57,2,103.21,0.61,Entradas,1,1,0,14,3,0,1,1,Fiel Tradicional
+56,41,Mujer,Sevilla,B2C,5,8,4.9,0.31,22,1,0.47,2,80.6,5.12,Merchandising,0,0,0,13,8,0,0,1,Joven Digital
+57,68,Mujer,España,B2C,2,9,4.9,0.37,23,1,0.5,1,46.37,0.13,Digital,0,1,1,13,2,1,1,1,Fiel Tradicional
+58,17,Mujer,Internacional,B2C,3,10,3.8,0.7,26,0,0.73,1,94.23,0.66,Abonos,1,0,0,9,3,1,0,2,Fiel Tradicional
+59,35,Mujer,Sevilla,B2C,4,7,6.1,0.62,17,0,0.09,1,67.9,0.44,Digital,0,1,0,1,2,1,0,0,Fiel Tradicional
+60,43,Hombre,Sevilla,B2B,9,12,3.3,0.29,20,1,0.67,1,0.0,2.83,Abonos,0,0,0,5,1,1,0,2,Joven Digital
+61,62,Mujer,España,B2C,0,9,5.4,0.18,18,1,0.9,2,86.71,2.44,Digital,0,0,1,16,3,1,0,2,Internacional Ocasional
+62,22,Mujer,España,B2C,5,13,3.9,0.28,13,1,0.06,1,52.98,0.33,Merchandising,0,0,0,4,13,1,0,2,Joven Digital
+63,59,Mujer,Sevilla,B2B,5,13,3.1,0.74,16,0,0.14,2,61.25,0.1,Abonos,0,0,0,4,7,1,0,4,Fiel Tradicional
+64,23,Mujer,Sevilla,B2B,5,9,4.9,0.51,16,0,0.72,4,75.18,1.18,Entradas,1,0,0,14,0,0,1,1,Internacional Ocasional
+65,62,Mujer,Sevilla,B2B,5,7,4.6,0.47,21,1,0.44,4,28.39,0.49,Entradas,1,0,1,14,7,1,1,2,Fiel Tradicional
+66,50,Hombre,Andalucía,B2C,4,10,4.5,0.52,20,1,0.4,2,79.17,1.34,Digital,0,0,0,19,7,1,1,1,Joven Digital
+67,29,Hombre,Andalucía,B2C,9,9,4.1,0.36,21,1,0.14,2,65.5,0.04,Digital,0,0,0,10,14,1,0,3,Joven Digital
+68,32,Mujer,Sevilla,B2C,6,8,3.9,0.66,20,1,0.51,2,48.68,0.17,Digital,0,0,0,4,2,0,1,1,Internacional Ocasional
+69,51,Hombre,Andalucía,B2C,2,7,7.6,0.47,25,0,0.13,0,76.39,1.39,Abonos,0,1,0,0,13,0,1,4,Joven Digital
+70,65,Mujer,España,B2C,6,7,5.8,0.18,14,1,0.48,1,24.29,0.29,Entradas,0,1,0,10,9,0,0,0,Fiel Tradicional
+71,55,Mujer,Sevilla,B2C,6,12,5.1,0.19,28,1,0.76,0,77.27,2.34,Merchandising,0,0,0,10,9,1,1,2,Internacional Ocasional
+72,19,Hombre,Sevilla,B2C,6,6,4.2,0.48,18,0,0.26,1,89.12,0.07,Abonos,0,0,0,5,11,0,0,0,Corporativo
+73,17,Hombre,España,B2C,5,9,5.5,0.76,20,1,0.48,1,84.16,0.29,Digital,0,0,1,7,11,0,0,2,Fiel Tradicional
+74,21,Mujer,España,B2C,2,10,4.8,0.32,28,0,0.99,3,98.67,7.85,Entradas,0,1,0,1,5,0,0,2,Corporativo
+75,69,Mujer,Andalucía,B2C,5,9,4.0,0.71,16,0,0.69,2,109.96,0.68,Digital,0,1,1,14,12,1,0,0,Internacional Ocasional
+76,57,Mujer,Andalucía,B2C,3,12,3.5,0.63,18,0,0.84,2,72.56,1.46,Merchandising,1,0,0,8,12,1,1,3,Internacional Ocasional
+77,19,Hombre,Sevilla,B2C,3,7,3.9,0.27,19,0,0.41,3,107.86,0.24,Merchandising,0,1,0,14,3,1,0,4,Fiel Tradicional
+78,69,Mujer,Andalucía,B2C,3,7,-0.8,0.13,17,0,0.77,1,72.45,1.13,Entradas,0,1,0,7,12,0,0,1,Joven Digital
+79,44,Mujer,Andalucía,B2B,6,9,4.3,0.17,14,1,0.04,6,54.02,1.55,Abonos,0,1,0,15,0,0,1,2,Fiel Tradicional
+80,33,Mujer,Sevilla,B2C,6,8,3.3,0.61,21,1,0.12,2,63.22,0.45,Merchandising,0,0,0,13,13,0,1,2,Joven Digital
+81,41,Hombre,Sevilla,B2C,4,12,6.4,0.24,29,1,0.2,4,83.01,2.12,Merchandising,0,0,0,14,0,0,1,0,Joven Digital
+82,59,Mujer,Sevilla,B2C,5,13,4.0,0.36,14,0,0.4,2,107.56,1.11,Merchandising,0,0,0,19,4,1,0,1,Fiel Tradicional
+83,49,Mujer,Sevilla,B2C,5,14,2.2,0.45,26,0,0.85,0,75.04,0.59,Merchandising,1,0,0,12,11,0,0,1,Internacional Ocasional
+84,25,Hombre,Sevilla,B2C,7,12,3.9,0.61,30,1,0.35,3,54.79,0.98,Digital,0,0,0,8,7,0,1,3,Fiel Tradicional
+85,51,Mujer,Sevilla,B2C,5,8,2.4,0.18,10,0,0.65,1,118.33,1.03,Digital,0,0,0,0,0,0,0,0,Corporativo
+86,29,Mujer,Sevilla,B2C,3,7,4.7,0.38,18,0,0.71,1,31.96,0.22,Abonos,0,0,0,5,1,0,0,3,Internacional Ocasional
+87,46,Hombre,Sevilla,B2C,4,4,4.4,0.44,21,1,0.59,2,54.98,0.62,Entradas,1,0,1,7,6,1,0,0,Joven Digital
+88,63,Mujer,España,B2B,7,10,5.4,0.48,22,1,0.36,1,101.78,0.5,Entradas,1,0,0,19,7,0,0,2,Internacional Ocasional
+89,30,Hombre,Andalucía,B2C,5,9,2.8,0.67,14,1,0.58,3,127.99,0.61,Entradas,1,0,0,17,11,1,0,2,Fiel Tradicional
+90,23,Hombre,Andalucía,B2C,7,10,4.1,0.22,17,1,0.34,2,89.42,1.72,Merchandising,0,1,1,17,13,0,0,2,Internacional Ocasional
+91,29,Mujer,España,B2B,8,4,2.0,0.67,22,0,0.08,4,82.5,0.79,Digital,1,1,1,16,2,0,0,1,Joven Digital
+92,38,Mujer,Andalucía,B2B,7,8,5.1,0.59,15,1,0.99,0,66.27,3.38,Digital,0,0,0,15,10,0,0,0,Joven Digital
+93,55,Mujer,Sevilla,B2C,5,6,4.8,0.49,17,0,0.13,2,91.44,0.42,Abonos,0,0,0,12,11,0,0,4,Internacional Ocasional
+94,36,Mujer,Andalucía,B2C,8,6,4.7,0.59,17,1,0.07,2,78.88,0.64,Entradas,1,0,0,3,12,1,0,0,Corporativo
+95,31,Hombre,Andalucía,B2C,4,15,4.0,0.39,10,0,0.88,2,52.36,1.86,Digital,1,0,0,3,7,0,1,2,Joven Digital
+96,60,Mujer,España,B2C,6,13,4.6,0.2,23,1,0.3,3,65.73,0.95,Abonos,0,1,0,13,0,0,1,0,Corporativo
+97,33,Hombre,Andalucía,B2C,8,15,6.4,0.57,16,0,0.65,3,48.98,0.95,Entradas,0,0,0,4,8,0,0,0,Joven Digital
+98,62,Mujer,Sevilla,B2C,6,8,3.6,0.47,22,1,0.33,0,75.41,0.07,Merchandising,0,0,0,15,11,0,0,4,Internacional Ocasional
+99,68,Mujer,Sevilla,B2C,3,9,4.2,0.55,24,1,0.39,2,79.86,0.61,Digital,0,1,0,13,1,1,0,2,Joven Digital
+100,39,Mujer,Sevilla,B2B,8,10,2.4,0.34,15,1,0.26,2,124.03,0.38,Digital,0,0,0,13,13,0,0,1,Corporativo
+101,41,Hombre,Andalucía,B2B,4,12,2.7,0.73,20,1,0.34,3,57.08,8.78,Entradas,1,0,0,13,12,0,0,1,Corporativo
+102,40,Mujer,Andalucía,B2C,7,8,4.1,0.51,22,1,0.41,3,69.58,0.44,Merchandising,0,0,0,13,1,1,0,1,Internacional Ocasional
+103,60,Mujer,Sevilla,B2C,2,11,5.7,0.16,19,1,0.72,1,112.78,2.59,Merchandising,1,0,0,18,3,0,1,0,Corporativo
+104,56,Mujer,Internacional,B2C,10,10,3.6,0.41,17,1,0.51,1,129.15,1.35,Digital,1,0,0,2,11,0,1,3,Corporativo
+105,44,Mujer,Andalucía,B2C,6,9,3.6,0.63,24,1,0.94,2,89.24,0.5,Entradas,0,0,0,16,9,0,0,0,Internacional Ocasional
+106,30,Hombre,Sevilla,B2C,4,8,3.4,0.66,21,1,0.04,1,67.39,0.94,Abonos,1,0,0,13,2,0,0,0,Joven Digital
+107,60,Mujer,Sevilla,B2C,5,6,3.2,0.45,14,1,0.5,2,60.81,2.2,Digital,0,1,0,9,3,1,1,2,Internacional Ocasional
+108,16,Hombre,Sevilla,B2C,6,17,4.4,0.73,16,1,0.58,5,19.71,2.58,Merchandising,0,0,0,12,5,0,0,4,Joven Digital
+109,40,Hombre,Sevilla,B2C,4,13,1.8,0.29,21,1,0.92,4,47.17,0.21,Abonos,0,1,0,3,6,1,1,1,Joven Digital
+110,22,Hombre,Sevilla,B2C,5,13,5.9,0.39,23,1,0.05,3,78.05,0.5,Entradas,0,0,0,10,4,0,0,1,Joven Digital
+111,24,Hombre,Sevilla,B2C,6,11,3.0,0.73,13,1,0.57,4,69.57,0.49,Merchandising,1,0,0,14,1,1,1,1,Fiel Tradicional
+112,39,Hombre,Sevilla,B2C,3,11,5.1,0.73,15,1,0.85,0,93.7,0.05,Abonos,1,0,0,14,2,0,1,0,Joven Digital
+113,16,Hombre,Sevilla,B2C,7,4,2.1,0.58,18,0,0.24,0,69.14,1.09,Digital,0,0,0,1,9,0,1,3,Internacional Ocasional
+114,59,Mujer,España,B2B,7,8,5.0,0.7,14,1,0.88,0,53.22,2.32,Merchandising,1,0,0,10,10,0,0,0,Internacional Ocasional
+115,23,Hombre,Sevilla,B2C,8,9,5.0,0.16,17,1,0.02,1,85.24,0.58,Entradas,0,0,0,1,2,0,0,1,Internacional Ocasional
+116,39,Hombre,Andalucía,B2C,4,11,4.6,0.71,25,1,0.73,2,150.16,1.62,Merchandising,1,1,0,4,13,1,0,2,Fiel Tradicional
+117,26,Hombre,Andalucía,B2C,7,9,2.5,0.32,24,1,0.93,1,65.48,1.19,Digital,0,0,1,12,4,1,1,2,Corporativo
+118,66,Mujer,Internacional,B2C,3,7,4.4,0.22,17,0,0.66,1,79.17,0.57,Entradas,0,0,0,0,11,0,0,1,Fiel Tradicional
+119,32,Mujer,Sevilla,B2C,4,8,2.2,0.27,19,1,0.44,0,100.41,0.18,Digital,0,1,0,6,10,0,0,0,Internacional Ocasional
+120,23,Hombre,Sevilla,B2C,4,11,3.6,0.39,16,1,0.04,3,57.85,1.48,Abonos,0,0,1,6,11,0,0,3,Internacional Ocasional
+121,50,Mujer,Internacional,B2C,0,9,5.5,0.28,20,1,0.92,3,113.18,2.31,Merchandising,0,0,1,9,4,1,0,2,Corporativo
+122,50,Hombre,España,B2C,1,7,5.2,0.32,12,0,0.47,2,27.63,1.39,Digital,1,1,0,5,3,1,0,2,Fiel Tradicional
+123,48,Hombre,España,B2B,1,13,4.0,0.19,16,1,0.03,2,62.77,0.02,Abonos,0,0,0,19,7,0,0,3,Internacional Ocasional
+124,20,Mujer,Sevilla,B2C,7,8,2.5,0.31,15,1,0.69,1,65.66,0.29,Entradas,1,0,0,11,5,1,0,3,Joven Digital
+125,57,Hombre,Sevilla,B2C,5,8,5.0,0.5,16,0,0.48,0,79.53,0.09,Entradas,0,0,0,12,5,1,0,1,Joven Digital
+126,54,Mujer,Andalucía,B2B,5,11,4.0,0.41,29,0,0.12,1,15.86,1.01,Abonos,0,0,0,10,0,0,1,3,Internacional Ocasional
+127,56,Mujer,Internacional,B2C,8,9,0.5,0.34,18,0,0.21,0,115.58,1.7,Abonos,0,0,0,17,5,1,1,1,Joven Digital
+128,43,Hombre,Andalucía,B2B,3,6,5.2,0.62,10,1,0.06,4,87.43,0.14,Entradas,0,0,0,1,2,0,1,3,Corporativo
+129,22,Hombre,Andalucía,B2C,5,6,4.0,0.73,22,0,0.57,2,108.68,2.19,Digital,0,1,0,15,12,0,0,1,Internacional Ocasional
+130,24,Mujer,Sevilla,B2C,3,16,5.8,0.63,29,0,0.62,1,123.39,0.97,Abonos,0,1,0,1,5,0,1,3,Fiel Tradicional
+131,23,Hombre,España,B2C,5,19,2.4,0.33,23,1,0.51,5,52.78,1.41,Digital,0,0,1,18,9,0,0,2,Internacional Ocasional
+132,27,Hombre,Sevilla,B2C,1,12,-0.8,0.62,20,0,0.82,1,0.17,4.27,Entradas,0,0,0,5,12,0,0,3,Corporativo
+133,49,Hombre,Sevilla,B2C,7,14,4.4,0.21,19,0,0.86,2,109.39,0.1,Digital,1,1,0,0,10,0,0,0,Fiel Tradicional
+134,48,Mujer,Andalucía,B2C,2,10,4.4,0.19,18,1,0.62,3,66.41,2.78,Digital,0,0,0,10,12,1,0,0,Corporativo
+135,63,Mujer,Andalucía,B2C,4,8,1.5,0.34,20,1,0.01,1,41.0,0.16,Abonos,0,0,0,17,5,0,0,1,Joven Digital
+136,38,Hombre,Sevilla,B2C,6,13,2.5,0.67,15,1,0.7,1,92.29,0.6,Digital,0,0,0,9,1,0,1,1,Joven Digital
+137,39,Mujer,Sevilla,B2C,7,17,8.1,0.27,23,1,0.42,2,148.91,2.29,Digital,1,1,1,17,0,1,0,1,Joven Digital
+138,52,Mujer,Andalucía,B2B,9,3,3.5,0.14,20,1,0.57,1,71.73,2.84,Digital,1,0,1,0,10,0,0,2,Corporativo
+139,50,Mujer,Sevilla,B2B,4,10,5.1,0.19,20,1,0.65,1,103.53,0.85,Entradas,0,1,0,18,14,0,0,1,Corporativo
+140,59,Mujer,Andalucía,B2B,1,9,3.0,0.7,20,0,0.35,2,45.37,1.08,Entradas,0,0,0,15,2,1,0,1,Internacional Ocasional
+141,55,Mujer,Sevilla,B2C,4,18,0.9,0.54,22,0,0.92,0,24.4,1.48,Merchandising,0,0,0,6,4,1,0,3,Fiel Tradicional
+142,37,Hombre,Andalucía,B2C,6,10,3.7,0.28,13,1,0.13,3,102.42,2.15,Entradas,0,0,0,14,14,0,0,1,Fiel Tradicional
+143,42,Hombre,Andalucía,B2C,3,15,3.6,0.49,14,0,0.67,1,91.38,0.16,Entradas,0,0,0,0,14,0,1,2,Corporativo
+144,50,Hombre,Sevilla,B2C,4,8,3.4,0.47,20,1,0.0,1,61.03,1.99,Merchandising,1,1,0,8,3,1,0,3,Corporativo
+145,16,Mujer,Sevilla,B2C,2,14,3.8,0.56,21,1,0.92,1,126.19,0.79,Merchandising,0,1,0,1,6,0,0,2,Joven Digital
+146,50,Mujer,Sevilla,B2C,6,11,4.4,0.26,19,0,0.11,3,22.07,0.72,Abonos,0,0,0,16,3,0,1,1,Corporativo
+147,52,Hombre,Sevilla,B2C,8,9,3.8,0.71,23,0,0.09,3,38.1,0.66,Abonos,1,1,0,9,7,0,1,0,Joven Digital
+148,62,Mujer,Internacional,B2C,7,9,2.1,0.32,17,0,0.33,1,58.71,0.85,Entradas,0,1,1,5,6,0,1,4,Corporativo
+149,29,Hombre,Sevilla,B2C,2,9,4.7,0.59,22,1,0.37,2,64.31,3.48,Digital,0,0,0,4,9,1,1,1,Fiel Tradicional
+150,18,Hombre,España,B2C,6,9,1.1,0.11,25,1,0.21,2,118.96,0.95,Abonos,0,0,0,7,8,1,0,0,Internacional Ocasional
+151,16,Hombre,Sevilla,B2C,9,7,0.9,0.36,17,1,0.59,2,76.48,3.67,Abonos,0,0,0,7,0,1,0,2,Corporativo
+152,20,Mujer,Andalucía,B2B,3,10,5.1,0.35,22,0,0.44,1,69.21,0.24,Entradas,1,0,0,4,14,1,1,1,Joven Digital
+153,41,Mujer,España,B2C,8,8,4.8,0.48,21,1,0.03,2,36.9,1.55,Digital,0,0,0,11,4,0,1,3,Internacional Ocasional
+154,29,Hombre,Andalucía,B2C,7,10,3.9,0.15,18,1,0.32,2,107.6,2.01,Merchandising,0,0,0,6,12,0,0,1,Joven Digital
+155,54,Hombre,Andalucía,B2C,6,17,1.9,0.65,15,0,0.81,0,40.9,1.36,Merchandising,0,0,0,12,3,1,0,1,Joven Digital
+156,42,Hombre,Andalucía,B2C,10,10,2.9,0.25,19,1,0.69,3,36.76,1.12,Entradas,1,1,0,12,5,0,1,0,Internacional Ocasional
+157,24,Hombre,Sevilla,B2C,5,10,3.6,0.57,16,1,0.72,1,62.99,1.0,Entradas,0,1,0,16,0,0,0,1,Internacional Ocasional
+158,30,Mujer,Internacional,B2C,5,7,1.6,0.66,20,0,0.7,4,79.9,2.37,Digital,0,0,0,3,5,1,0,0,Internacional Ocasional
+159,30,Mujer,España,B2C,5,6,2.9,0.49,17,1,0.31,3,53.4,2.07,Entradas,1,0,1,17,0,0,0,2,Corporativo
+160,41,Hombre,Internacional,B2C,5,10,5.0,0.62,15,0,0.1,4,96.21,0.16,Entradas,0,0,1,9,13,0,1,1,Internacional Ocasional
+161,57,Hombre,Sevilla,B2C,4,12,6.1,0.56,18,1,0.27,3,66.51,2.27,Entradas,0,0,0,2,13,1,1,1,Corporativo
+162,28,Mujer,España,B2C,10,12,3.4,0.35,20,0,0.83,0,106.58,0.64,Digital,0,0,0,11,0,1,0,1,Fiel Tradicional
+163,66,Mujer,Internacional,B2B,3,8,5.1,0.67,13,1,0.98,2,90.15,0.35,Entradas,0,0,0,0,7,0,0,2,Fiel Tradicional
+164,47,Hombre,Sevilla,B2C,2,5,1.1,0.31,22,1,0.49,2,128.74,2.45,Abonos,0,0,0,10,1,1,0,1,Joven Digital
+165,54,Hombre,Sevilla,B2C,6,13,5.0,0.5,17,1,0.01,1,61.73,0.68,Digital,0,0,0,17,9,0,0,1,Joven Digital
+166,64,Hombre,España,B2B,4,9,2.8,0.62,15,1,0.14,1,100.32,1.98,Abonos,0,0,0,12,12,0,0,1,Corporativo
+167,67,Mujer,Andalucía,B2C,4,14,4.5,0.37,16,1,0.32,1,21.4,0.37,Digital,0,0,0,16,13,1,0,2,Joven Digital
+168,47,Mujer,España,B2C,8,14,3.6,0.31,17,1,0.58,4,161.75,0.0,Abonos,0,1,0,7,5,1,0,0,Fiel Tradicional
+169,19,Mujer,Sevilla,B2C,5,7,6.0,0.42,22,1,0.08,1,98.82,0.82,Digital,0,1,0,19,13,0,1,3,Corporativo
+170,45,Hombre,España,B2C,4,10,2.7,0.67,14,1,0.94,2,66.11,0.13,Merchandising,0,0,1,18,5,0,1,1,Corporativo
+171,52,Hombre,Sevilla,B2B,7,7,4.9,0.75,18,1,0.37,0,67.23,1.68,Entradas,1,0,0,16,5,0,0,1,Internacional Ocasional
+172,38,Mujer,Sevilla,B2C,4,12,3.6,0.48,21,1,0.91,1,67.59,0.39,Entradas,0,0,0,1,7,0,0,1,Corporativo
+173,54,Mujer,Sevilla,B2B,2,17,3.8,0.56,22,1,0.78,4,130.2,0.7,Digital,1,0,0,2,3,0,1,3,Joven Digital
+174,60,Hombre,España,B2C,2,16,3.7,0.73,20,1,0.76,0,101.96,0.11,Abonos,0,0,0,2,2,0,0,3,Fiel Tradicional
+175,30,Mujer,Andalucía,B2C,3,7,2.7,0.17,17,1,0.61,2,61.7,0.41,Merchandising,0,0,0,5,5,0,1,0,Joven Digital
+176,58,Mujer,Andalucía,B2C,3,12,4.0,0.26,21,0,0.63,0,37.84,1.83,Abonos,0,1,0,9,3,0,0,0,Fiel Tradicional
+177,44,Hombre,Sevilla,B2C,8,8,3.9,0.6,16,0,0.64,3,110.88,0.2,Entradas,1,0,0,17,1,0,1,2,Internacional Ocasional
+178,51,Mujer,España,B2C,6,11,4.4,0.68,20,0,0.63,2,100.16,1.25,Entradas,1,1,0,17,5,1,1,3,Fiel Tradicional
+179,28,Hombre,Sevilla,B2B,0,6,4.1,0.7,27,1,0.55,2,96.19,2.99,Abonos,0,0,0,13,9,0,1,1,Internacional Ocasional
+180,47,Hombre,España,B2C,8,13,5.2,0.39,18,0,0.99,2,72.49,1.37,Digital,1,0,0,15,4,0,1,0,Joven Digital
+181,22,Hombre,Andalucía,B2B,5,7,5.4,0.16,25,1,0.73,1,66.01,2.0,Digital,0,0,1,6,10,1,1,0,Internacional Ocasional
+182,66,Hombre,Sevilla,B2C,4,11,2.4,0.41,21,1,0.78,2,125.56,0.14,Abonos,0,0,0,0,8,1,0,1,Corporativo
+183,37,Hombre,Andalucía,B2B,5,10,5.3,0.26,25,0,0.87,2,128.35,0.35,Entradas,1,0,0,16,10,0,0,0,Corporativo
+184,43,Hombre,Sevilla,B2C,7,8,2.2,0.3,26,1,0.22,3,94.2,2.7,Abonos,1,0,0,4,5,0,0,0,Fiel Tradicional
+185,17,Hombre,España,B2C,6,7,4.9,0.64,19,0,0.08,3,104.1,1.51,Entradas,1,0,1,0,13,1,1,0,Joven Digital
+186,57,Mujer,Andalucía,B2C,3,7,4.9,0.15,22,0,0.48,1,82.08,1.22,Abonos,0,0,0,16,2,0,1,2,Joven Digital
+187,60,Hombre,Sevilla,B2C,4,9,1.1,0.68,26,1,0.51,3,33.9,1.31,Digital,0,0,0,9,10,1,0,1,Fiel Tradicional
+188,68,Hombre,España,B2C,2,9,4.1,0.4,18,1,0.83,3,45.61,0.64,Merchandising,0,1,1,11,4,0,0,0,Corporativo
+189,21,Mujer,Sevilla,B2C,4,10,3.3,0.52,19,1,0.44,4,109.39,0.05,Entradas,0,0,0,19,14,0,1,1,Internacional Ocasional
+190,43,Mujer,Andalucía,B2C,1,10,2.9,0.16,19,0,0.57,0,113.21,1.84,Merchandising,1,0,0,1,9,0,0,4,Fiel Tradicional
+191,43,Mujer,Internacional,B2B,9,12,6.0,0.34,19,1,0.53,1,106.62,1.36,Digital,0,0,0,15,7,1,0,1,Internacional Ocasional
+192,59,Hombre,Andalucía,B2C,3,10,3.0,0.16,21,0,0.04,0,85.38,0.77,Abonos,0,1,0,14,8,1,1,1,Internacional Ocasional
+193,59,Mujer,Sevilla,B2C,1,15,2.8,0.77,13,0,0.62,1,107.74,2.76,Digital,0,0,0,12,7,0,0,2,Joven Digital
+194,35,Hombre,Internacional,B2C,5,10,4.1,0.67,18,0,0.83,0,73.26,0.49,Merchandising,0,0,0,17,14,0,0,1,Corporativo
+195,45,Hombre,Andalucía,B2C,4,10,5.0,0.42,26,0,0.16,2,93.64,0.42,Digital,0,0,0,19,2,0,0,3,Internacional Ocasional
+196,26,Hombre,Sevilla,B2C,6,11,3.8,0.26,16,0,0.59,5,68.86,2.47,Digital,0,0,0,13,8,0,0,0,Corporativo
+197,43,Hombre,Sevilla,B2C,5,10,5.7,0.75,21,0,0.59,0,43.3,1.91,Abonos,1,0,0,17,2,1,0,1,Joven Digital
+198,40,Mujer,España,B2C,8,4,4.8,0.34,14,1,0.16,6,100.94,0.87,Merchandising,0,1,0,1,7,0,0,0,Fiel Tradicional
+199,54,Mujer,Andalucía,B2C,5,14,0.7,0.21,19,0,0.12,0,113.25,0.17,Merchandising,1,1,0,1,9,1,0,2,Fiel Tradicional
+200,48,Hombre,Andalucía,B2C,7,7,3.2,0.49,21,0,0.98,4,149.22,0.29,Merchandising,0,0,0,2,8,0,0,0,Joven Digital
+201,16,Hombre,España,B2C,4,13,3.2,0.76,21,0,0.39,2,82.92,1.28,Entradas,0,0,0,4,6,1,0,1,Joven Digital
+202,42,Hombre,España,B2C,1,11,4.7,0.1,17,1,0.23,3,43.57,0.58,Digital,0,0,1,15,3,1,0,2,Internacional Ocasional
+203,67,Mujer,Sevilla,B2C,5,2,0.1,0.27,24,0,0.17,1,65.15,2.17,Merchandising,1,0,0,14,9,0,1,0,Joven Digital
+204,28,Hombre,Sevilla,B2C,4,14,7.8,0.76,18,1,0.67,4,70.92,3.59,Digital,0,1,1,11,14,0,0,0,Fiel Tradicional
+205,56,Hombre,Sevilla,B2C,3,3,4.8,0.22,21,1,0.61,2,79.45,1.97,Abonos,0,0,0,8,8,0,1,2,Corporativo
+206,18,Mujer,España,B2C,2,14,4.2,0.18,18,0,0.64,1,89.13,0.57,Abonos,0,0,0,13,2,0,1,0,Corporativo
+207,54,Mujer,Sevilla,B2C,12,9,5.8,0.5,21,1,0.09,0,85.89,1.87,Entradas,0,0,0,15,14,0,0,0,Corporativo
+208,21,Hombre,Andalucía,B2C,5,9,7.5,0.7,22,0,0.89,3,98.31,0.52,Entradas,1,1,0,10,2,0,1,2,Corporativo
+209,23,Mujer,España,B2C,10,11,5.3,0.43,12,1,0.39,4,80.92,0.22,Abonos,1,0,1,5,1,1,0,3,Joven Digital
+210,42,Mujer,España,B2C,6,8,5.4,0.8,16,1,0.31,2,8.24,0.04,Merchandising,0,0,1,9,9,0,1,0,Joven Digital
+211,24,Hombre,Sevilla,B2C,1,9,4.2,0.58,25,0,0.46,4,81.81,0.58,Abonos,0,0,0,7,14,1,0,0,Corporativo
+212,52,Mujer,España,B2C,6,11,3.8,0.15,24,0,0.39,3,77.6,2.81,Digital,1,0,0,15,2,1,1,3,Joven Digital
+213,48,Hombre,Sevilla,B2C,2,8,3.3,0.79,19,1,0.86,2,91.51,0.33,Entradas,0,1,0,2,0,1,0,1,Internacional Ocasional
+214,66,Mujer,España,B2B,4,10,2.8,0.39,15,1,0.93,5,64.16,0.28,Entradas,0,0,0,1,14,0,1,1,Joven Digital
+215,57,Hombre,Sevilla,B2C,5,13,3.0,0.3,15,0,0.3,1,81.71,4.2,Abonos,0,0,0,15,3,0,0,0,Internacional Ocasional
+216,59,Hombre,Sevilla,B2C,8,15,2.0,0.49,24,1,0.86,2,91.69,0.03,Merchandising,0,0,0,18,7,0,1,1,Internacional Ocasional
+217,39,Hombre,España,B2C,4,10,3.9,0.31,25,1,0.78,2,70.2,1.85,Merchandising,0,1,0,8,4,0,0,1,Joven Digital
+218,30,Mujer,Sevilla,B2C,2,8,1.5,0.16,29,1,0.93,1,95.28,0.47,Digital,1,0,0,15,1,0,1,3,Corporativo
+219,69,Hombre,Sevilla,B2C,1,11,4.3,0.1,22,0,0.25,0,77.1,0.05,Entradas,0,0,0,3,2,1,0,4,Internacional Ocasional
+220,47,Mujer,España,B2B,8,5,3.9,0.41,22,1,0.58,3,79.7,3.0,Abonos,0,0,0,9,0,0,0,1,Joven Digital
+221,47,Hombre,España,B2C,8,18,4.2,0.69,15,1,0.27,3,0.0,0.18,Abonos,1,0,0,18,1,0,1,3,Fiel Tradicional
+222,39,Hombre,Andalucía,B2C,4,11,3.2,0.5,20,0,0.82,3,40.68,0.96,Entradas,0,1,1,12,0,1,1,1,Corporativo
+223,56,Mujer,Andalucía,B2C,1,11,8.6,0.8,23,1,0.01,2,40.77,0.38,Abonos,0,1,0,17,1,0,0,1,Fiel Tradicional
+224,67,Hombre,Andalucía,B2C,9,11,6.0,0.3,14,1,0.56,3,81.49,0.08,Entradas,0,0,0,14,2,0,1,1,Internacional Ocasional
+225,64,Hombre,Sevilla,B2C,4,9,2.1,0.3,20,1,0.34,3,113.15,0.06,Merchandising,0,0,0,3,0,1,1,2,Fiel Tradicional
+226,64,Mujer,Sevilla,B2C,2,11,4.3,0.21,28,0,0.32,0,71.45,0.15,Merchandising,1,1,0,8,10,0,1,0,Joven Digital
+227,67,Hombre,Sevilla,B2C,4,8,3.1,0.21,25,1,0.64,1,100.45,0.09,Abonos,1,0,0,3,8,0,0,1,Corporativo
+228,27,Hombre,Internacional,B2C,3,12,2.5,0.3,18,0,0.85,4,94.45,1.72,Merchandising,0,0,1,15,9,0,0,2,Internacional Ocasional
+229,54,Hombre,Andalucía,B2C,8,7,2.0,0.65,21,1,0.61,1,79.2,0.8,Merchandising,0,0,1,14,4,1,1,1,Joven Digital
+230,17,Hombre,Andalucía,B2C,9,10,4.6,0.73,27,0,0.85,2,92.22,0.5,Digital,0,0,0,1,7,0,0,3,Corporativo
+231,18,Mujer,Andalucía,B2C,4,11,3.0,0.78,22,1,0.26,3,82.38,0.65,Entradas,1,0,0,13,4,0,0,1,Internacional Ocasional
+232,64,Mujer,Internacional,B2C,4,8,5.5,0.26,20,1,0.52,1,70.73,3.17,Entradas,0,1,0,2,7,0,0,2,Internacional Ocasional
+233,52,Hombre,Sevilla,B2C,5,7,5.5,0.72,19,0,0.45,1,86.73,2.9,Abonos,0,1,0,3,6,0,0,1,Internacional Ocasional
+234,64,Mujer,Andalucía,B2C,11,7,6.1,0.33,20,1,0.01,4,118.4,1.51,Entradas,0,0,0,0,11,0,1,0,Internacional Ocasional
+235,32,Hombre,Andalucía,B2C,8,9,2.7,0.18,16,1,0.56,5,89.18,2.59,Digital,0,0,0,8,3,0,1,0,Fiel Tradicional
+236,64,Mujer,Andalucía,B2C,6,9,4.7,0.71,22,0,0.66,1,81.54,0.46,Abonos,0,0,0,16,14,0,0,1,Fiel Tradicional
+237,17,Hombre,Sevilla,B2C,2,14,4.9,0.55,21,1,0.59,1,48.68,0.58,Abonos,0,0,0,13,6,0,0,1,Fiel Tradicional
+238,17,Hombre,España,B2C,8,9,3.3,0.22,17,1,0.74,5,117.48,1.14,Entradas,1,0,0,16,5,0,0,0,Internacional Ocasional
+239,43,Hombre,Internacional,B2C,7,12,2.8,0.4,15,0,0.57,0,32.79,1.17,Merchandising,0,0,0,0,2,0,0,1,Fiel Tradicional
+240,69,Hombre,Andalucía,B2C,6,16,6.4,0.3,18,0,0.07,2,23.82,0.79,Merchandising,1,1,0,9,8,0,0,2,Corporativo
+241,38,Hombre,Andalucía,B2C,5,8,4.3,0.62,17,0,0.12,1,86.14,0.61,Merchandising,0,1,0,15,11,0,1,1,Internacional Ocasional
+242,52,Hombre,Internacional,B2C,3,7,5.0,0.42,27,0,0.6,2,48.58,5.14,Merchandising,0,0,0,18,9,0,1,3,Corporativo
+243,47,Mujer,España,B2C,5,12,2.8,0.79,16,1,0.27,2,107.67,2.07,Digital,1,0,0,2,14,1,0,3,Corporativo
+244,48,Hombre,Sevilla,B2B,3,9,2.2,0.14,17,0,0.08,1,24.49,0.69,Abonos,0,0,0,11,12,1,1,0,Fiel Tradicional
+245,16,Mujer,Andalucía,B2C,3,11,3.1,0.35,26,1,0.43,3,103.85,1.56,Merchandising,1,1,1,2,8,0,0,1,Internacional Ocasional
+246,34,Hombre,Andalucía,B2C,7,13,3.8,0.44,15,1,0.55,3,99.63,0.38,Digital,1,0,0,14,13,0,1,1,Fiel Tradicional
+247,17,Mujer,Andalucía,B2C,4,14,2.4,0.45,20,0,0.33,3,78.54,0.13,Abonos,0,0,0,16,4,0,0,0,Fiel Tradicional
+248,68,Mujer,España,B2B,4,17,4.0,0.32,26,1,0.72,1,12.01,0.52,Entradas,0,0,0,17,7,0,1,0,Fiel Tradicional
+249,59,Mujer,Internacional,B2C,6,8,1.5,0.61,27,1,0.64,0,23.3,0.62,Entradas,0,1,0,6,6,0,0,1,Internacional Ocasional
+250,41,Hombre,Internacional,B2C,6,9,2.3,0.71,20,1,0.33,2,82.2,0.02,Digital,0,1,0,18,8,0,0,0,Internacional Ocasional
+251,47,Hombre,Andalucía,B2C,3,9,5.0,0.76,22,0,0.75,1,68.02,2.02,Abonos,0,0,0,6,6,1,0,2,Fiel Tradicional
+252,21,Mujer,Sevilla,B2C,4,7,4.9,0.66,18,0,0.65,4,96.82,0.53,Merchandising,0,1,1,4,3,0,0,1,Corporativo
+253,47,Hombre,Internacional,B2C,6,8,3.4,0.7,11,1,0.64,4,72.95,1.04,Abonos,0,0,0,7,3,0,0,2,Corporativo
+254,19,Mujer,España,B2B,6,6,2.5,0.49,19,1,0.55,1,70.34,0.09,Merchandising,0,0,0,15,10,1,0,5,Internacional Ocasional
+255,26,Hombre,Sevilla,B2C,6,9,2.5,0.68,19,1,0.01,0,2.21,0.23,Digital,0,1,0,15,7,0,0,1,Joven Digital
+256,32,Mujer,Internacional,B2C,6,6,3.4,0.31,15,1,0.7,2,99.67,2.65,Merchandising,1,1,0,18,5,0,1,1,Fiel Tradicional
+257,53,Mujer,España,B2C,3,12,5.0,0.38,20,0,0.38,2,55.53,1.13,Digital,0,0,0,14,8,1,0,2,Fiel Tradicional
+258,39,Hombre,Andalucía,B2C,5,12,5.4,0.32,17,1,0.94,4,63.05,3.6,Abonos,0,0,0,6,13,1,1,0,Joven Digital
+259,20,Mujer,Andalucía,B2C,2,10,3.3,0.43,12,0,0.82,1,42.91,8.02,Abonos,0,1,1,4,9,1,0,2,Internacional Ocasional
+260,67,Hombre,Sevilla,B2C,5,12,2.3,0.3,12,0,0.59,1,28.79,0.56,Merchandising,1,1,0,10,13,0,1,1,Corporativo
+261,49,Mujer,Sevilla,B2C,3,12,4.4,0.77,23,1,0.25,2,119.16,0.43,Abonos,1,1,0,9,6,0,1,1,Internacional Ocasional
+262,21,Mujer,Sevilla,B2C,3,10,2.8,0.32,20,0,0.2,6,98.86,2.35,Merchandising,0,0,0,8,6,1,0,1,Corporativo
+263,37,Hombre,España,B2C,5,12,3.2,0.17,24,1,0.34,1,99.36,7.9,Abonos,1,1,0,0,3,0,1,1,Corporativo
+264,26,Hombre,Sevilla,B2C,11,14,6.0,0.47,18,1,0.48,0,68.5,1.19,Entradas,0,1,0,19,2,1,0,1,Internacional Ocasional
+265,63,Hombre,Sevilla,B2B,7,4,5.2,0.14,22,0,0.3,1,22.86,1.9,Merchandising,1,0,0,0,7,0,1,1,Fiel Tradicional
+266,31,Mujer,Sevilla,B2C,7,9,4.2,0.18,26,1,0.51,1,138.06,1.83,Digital,0,1,1,7,6,0,0,1,Fiel Tradicional
+267,48,Hombre,Andalucía,B2B,4,7,2.1,0.25,24,1,0.17,0,87.67,0.53,Entradas,0,0,0,2,3,1,0,3,Fiel Tradicional
+268,24,Mujer,Internacional,B2C,1,10,4.3,0.43,26,1,0.98,1,79.1,1.02,Digital,0,0,0,1,12,0,0,1,Corporativo
+269,21,Mujer,Sevilla,B2C,4,8,5.6,0.4,20,0,0.11,1,64.23,2.15,Abonos,0,0,1,3,3,0,0,0,Fiel Tradicional
+270,31,Hombre,Sevilla,B2C,5,14,3.4,0.66,12,0,0.93,4,13.66,1.4,Entradas,1,0,1,18,0,0,0,3,Corporativo
+271,44,Hombre,España,B2C,4,7,6.0,0.62,29,1,0.91,6,109.25,0.03,Abonos,0,0,0,10,10,0,1,0,Fiel Tradicional
+272,18,Mujer,Andalucía,B2C,4,8,5.9,0.4,21,0,0.53,1,43.27,0.49,Merchandising,1,1,1,4,6,0,0,3,Internacional Ocasional
+273,35,Mujer,Sevilla,B2C,7,10,6.5,0.33,13,0,0.72,1,91.4,0.19,Digital,0,0,0,9,0,0,0,2,Joven Digital
+274,51,Hombre,Andalucía,B2C,6,6,4.5,0.32,23,1,0.44,1,98.13,0.32,Abonos,0,0,0,7,9,0,0,1,Corporativo
+275,34,Hombre,Sevilla,B2C,8,16,4.9,0.64,17,0,0.63,2,85.02,2.83,Digital,0,1,0,12,9,1,0,2,Internacional Ocasional
+276,41,Hombre,Sevilla,B2B,4,10,6.1,0.14,16,1,0.34,0,89.1,0.05,Digital,0,0,1,4,3,0,0,4,Corporativo
+277,18,Hombre,Andalucía,B2B,3,5,4.7,0.11,29,0,0.3,5,115.38,0.3,Abonos,1,0,0,11,10,1,1,1,Corporativo
+278,34,Hombre,Andalucía,B2C,0,8,3.2,0.66,19,1,0.58,2,51.23,0.44,Merchandising,0,0,0,12,13,0,0,0,Internacional Ocasional
+279,35,Mujer,Internacional,B2C,4,2,3.3,0.43,18,1,0.5,2,79.94,1.15,Digital,0,0,0,7,2,0,0,4,Fiel Tradicional
+280,47,Mujer,Sevilla,B2C,1,13,4.4,0.19,22,0,0.58,1,68.25,0.92,Abonos,0,0,0,14,10,0,0,2,Corporativo
+281,22,Mujer,Andalucía,B2C,4,10,2.1,0.26,10,0,0.29,1,19.81,0.3,Merchandising,0,1,0,12,2,1,0,3,Joven Digital
+282,67,Mujer,Andalucía,B2C,3,9,3.8,0.75,21,1,0.37,1,83.59,0.22,Abonos,1,0,0,0,11,1,1,3,Joven Digital
+283,56,Hombre,Sevilla,B2C,5,13,5.6,0.7,20,1,0.08,6,112.54,0.32,Merchandising,0,1,1,5,0,1,0,4,Internacional Ocasional
+284,48,Hombre,Andalucía,B2C,6,9,0.7,0.6,16,1,0.05,2,116.29,0.84,Digital,1,0,0,10,3,0,0,0,Joven Digital
+285,55,Hombre,Sevilla,B2B,6,10,6.3,0.44,27,0,0.25,1,130.72,0.38,Entradas,0,0,0,12,13,0,0,1,Internacional Ocasional
+286,54,Mujer,Internacional,B2C,4,8,5.7,0.46,13,0,0.07,0,21.79,3.54,Abonos,0,0,0,19,0,1,0,1,Internacional Ocasional
+287,33,Mujer,Sevilla,B2C,4,10,3.3,0.78,28,1,0.1,4,123.86,0.75,Digital,1,1,1,0,13,1,0,1,Corporativo
+288,55,Hombre,Andalucía,B2C,5,6,4.8,0.78,20,1,0.81,0,80.55,0.07,Abonos,0,0,0,10,12,1,0,1,Internacional Ocasional
+289,16,Hombre,Sevilla,B2C,1,8,4.0,0.25,13,1,0.04,4,123.02,1.57,Abonos,0,0,0,10,12,0,1,0,Internacional Ocasional
+290,26,Mujer,Internacional,B2C,9,5,5.8,0.67,27,1,0.66,1,63.16,0.48,Merchandising,0,0,1,7,7,1,0,1,Fiel Tradicional
+291,43,Mujer,Andalucía,B2B,7,9,5.5,0.24,22,1,0.27,3,59.08,1.27,Abonos,0,0,0,2,14,0,0,1,Corporativo
+292,40,Hombre,Andalucía,B2C,5,7,1.9,0.25,21,1,0.87,2,38.54,0.39,Merchandising,1,0,0,18,14,0,0,5,Joven Digital
+293,65,Hombre,Sevilla,B2B,4,5,4.9,0.57,23,0,0.48,2,98.28,1.01,Digital,0,0,0,11,0,0,0,1,Fiel Tradicional
+294,38,Mujer,España,B2C,5,8,3.7,0.38,19,1,0.31,3,90.43,1.77,Abonos,1,0,1,5,11,0,0,2,Fiel Tradicional
+295,46,Hombre,Sevilla,B2C,4,15,4.1,0.75,15,1,0.52,1,41.49,3.16,Digital,0,1,0,7,13,1,1,2,Corporativo
+296,45,Hombre,España,B2C,1,5,2.9,0.16,17,0,0.38,1,10.08,0.36,Entradas,0,0,0,4,5,1,1,2,Corporativo
+297,57,Hombre,Sevilla,B2C,3,18,6.6,0.46,15,1,0.56,1,87.46,0.49,Digital,0,0,1,9,6,1,0,3,Fiel Tradicional
+298,50,Mujer,Sevilla,B2B,7,9,5.6,0.74,14,1,0.11,2,90.88,0.75,Abonos,0,0,0,15,14,0,0,2,Corporativo
+299,22,Mujer,Sevilla,B2B,6,8,2.9,0.73,16,1,1.0,1,45.39,3.14,Entradas,1,0,0,11,9,0,0,1,Corporativo
+300,31,Mujer,Andalucía,B2C,10,10,2.0,0.21,17,1,0.43,1,39.37,2.78,Merchandising,0,1,0,16,13,1,0,1,Internacional Ocasional
+301,41,Mujer,Andalucía,B2C,4,14,3.4,0.36,27,1,0.35,1,94.68,0.11,Entradas,0,0,0,5,11,0,1,2,Corporativo
+302,63,Mujer,Sevilla,B2C,5,11,4.7,0.53,21,0,0.71,3,130.69,0.17,Abonos,1,0,0,8,1,1,1,1,Internacional Ocasional
+303,67,Mujer,España,B2B,6,10,4.4,0.21,18,1,0.36,6,60.15,0.82,Abonos,1,1,0,9,3,0,1,3,Fiel Tradicional
+304,64,Mujer,Andalucía,B2C,6,11,5.9,0.78,22,1,0.83,2,48.61,0.14,Digital,0,0,1,19,10,0,0,4,Fiel Tradicional
+305,17,Hombre,Andalucía,B2C,8,13,5.2,0.74,17,1,0.45,0,83.97,0.51,Merchandising,1,0,0,13,13,0,0,2,Joven Digital
+306,16,Hombre,Andalucía,B2C,4,9,5.5,0.22,13,0,0.72,0,94.06,0.19,Abonos,0,0,0,13,2,1,1,1,Corporativo
+307,63,Hombre,Andalucía,B2C,3,9,4.5,0.18,20,0,0.11,3,64.07,1.21,Abonos,0,1,0,16,12,0,1,0,Fiel Tradicional
+308,27,Hombre,Andalucía,B2C,3,10,1.9,0.16,16,1,0.85,3,135.75,3.58,Merchandising,0,1,0,15,12,0,1,1,Internacional Ocasional
+309,20,Hombre,Sevilla,B2C,9,11,3.7,0.74,18,1,0.74,4,102.05,6.87,Merchandising,0,1,0,3,8,1,0,1,Fiel Tradicional
+310,52,Hombre,Sevilla,B2B,7,13,5.6,0.24,18,1,0.21,2,63.56,0.56,Digital,0,0,1,1,13,0,0,0,Corporativo
+311,47,Hombre,España,B2C,2,7,3.9,0.39,27,1,0.15,0,27.23,1.1,Entradas,0,1,0,15,6,1,0,0,Joven Digital
+312,24,Mujer,Internacional,B2C,2,7,4.8,0.41,19,1,0.32,2,114.58,2.33,Merchandising,0,0,1,0,1,0,0,0,Joven Digital
+313,56,Mujer,Sevilla,B2B,4,11,3.5,0.52,26,1,0.98,3,110.76,0.15,Abonos,1,0,0,2,10,0,0,1,Fiel Tradicional
+314,50,Hombre,Sevilla,B2C,6,6,2.5,0.15,29,1,0.26,2,65.92,1.4,Merchandising,1,1,0,10,11,1,1,3,Joven Digital
+315,34,Hombre,Andalucía,B2B,9,14,3.8,0.26,18,0,0.46,1,85.52,0.63,Abonos,1,0,0,15,5,0,0,1,Corporativo
+316,63,Mujer,Andalucía,B2C,11,12,4.5,0.75,21,1,0.03,2,70.49,0.28,Digital,0,0,0,17,8,0,0,1,Corporativo
+317,31,Hombre,Sevilla,B2C,4,5,3.0,0.74,19,1,0.4,2,90.62,0.62,Entradas,0,0,0,14,11,0,1,1,Joven Digital
+318,18,Hombre,Sevilla,B2B,7,9,3.6,0.65,23,0,0.57,1,44.25,0.09,Digital,0,0,0,8,2,0,0,2,Internacional Ocasional
+319,35,Mujer,España,B2C,7,18,2.6,0.11,29,0,0.95,1,39.97,1.43,Merchandising,0,1,0,11,13,0,1,5,Joven Digital
+320,39,Hombre,Andalucía,B2C,3,8,5.7,0.33,16,0,0.52,4,99.33,0.35,Abonos,0,0,0,17,14,0,0,2,Joven Digital
+321,69,Mujer,Sevilla,B2C,7,12,3.6,0.54,8,1,0.82,2,103.13,0.45,Merchandising,0,0,0,4,10,1,0,3,Fiel Tradicional
+322,48,Hombre,Sevilla,B2C,5,12,6.2,0.29,14,0,0.55,4,60.28,0.15,Merchandising,0,0,0,7,5,1,1,3,Internacional Ocasional
+323,39,Mujer,Sevilla,B2C,2,3,6.3,0.74,16,1,0.04,1,52.53,2.4,Merchandising,0,1,0,2,13,0,1,1,Joven Digital
+324,67,Mujer,Andalucía,B2C,9,8,3.9,0.54,16,1,0.32,1,109.43,0.82,Merchandising,0,1,0,1,2,0,0,2,Fiel Tradicional
+325,26,Mujer,Sevilla,B2B,6,10,2.5,0.15,13,1,0.58,3,53.54,1.02,Entradas,0,0,0,18,2,0,1,1,Fiel Tradicional
+326,64,Hombre,Sevilla,B2C,3,7,0.9,0.74,16,1,0.95,2,76.66,1.01,Abonos,0,1,0,7,3,0,0,0,Fiel Tradicional
+327,23,Mujer,España,B2C,6,9,1.8,0.77,27,0,0.86,1,72.86,0.63,Merchandising,0,1,0,1,8,0,0,1,Corporativo
+328,51,Hombre,Sevilla,B2C,3,12,1.9,0.15,18,1,0.23,1,30.99,0.26,Abonos,0,0,0,18,10,0,0,5,Fiel Tradicional
+329,53,Hombre,Andalucía,B2C,2,11,6.1,0.47,19,1,0.22,1,80.76,1.64,Entradas,0,0,0,0,12,0,0,1,Fiel Tradicional
+330,55,Hombre,Sevilla,B2C,8,12,4.2,0.31,19,1,0.2,1,77.83,0.16,Abonos,0,0,0,12,7,0,1,2,Corporativo
+331,35,Hombre,Sevilla,B2B,4,11,4.6,0.37,29,0,0.92,0,85.81,0.13,Abonos,0,1,1,19,0,0,1,1,Corporativo
+332,50,Mujer,Sevilla,B2C,5,7,0.7,0.23,21,1,0.85,3,79.75,1.49,Entradas,1,0,0,16,12,1,1,2,Fiel Tradicional
+333,63,Mujer,España,B2C,4,10,2.2,0.5,16,1,0.77,4,139.07,0.28,Merchandising,1,0,0,2,11,1,1,5,Joven Digital
+334,40,Hombre,España,B2C,3,4,5.3,0.77,16,1,0.39,1,109.85,0.44,Abonos,0,0,0,8,10,0,0,0,Internacional Ocasional
+335,50,Hombre,España,B2C,4,8,4.4,0.45,15,1,0.5,3,76.16,0.77,Digital,0,1,0,4,0,1,1,1,Corporativo
+336,40,Mujer,Sevilla,B2C,3,10,3.8,0.16,21,1,0.46,0,78.91,0.72,Abonos,0,0,0,5,6,0,1,2,Internacional Ocasional
+337,44,Hombre,Andalucía,B2C,11,8,4.8,0.53,18,1,0.25,3,127.91,1.48,Merchandising,0,1,1,3,2,1,1,1,Corporativo
+338,33,Mujer,Sevilla,B2C,6,7,6.5,0.34,21,1,0.51,1,100.89,1.17,Digital,0,1,0,16,13,0,1,3,Fiel Tradicional
+339,61,Hombre,Sevilla,B2C,5,12,3.7,0.7,11,1,0.03,2,38.13,1.24,Merchandising,0,0,0,15,10,1,1,2,Corporativo
+340,33,Hombre,España,B2C,5,9,4.1,0.4,25,0,0.13,3,103.47,1.5,Abonos,0,0,0,15,6,0,0,4,Fiel Tradicional
+341,17,Mujer,Sevilla,B2C,5,13,4.3,0.23,25,0,0.89,2,112.28,0.42,Entradas,1,0,0,10,8,0,1,2,Internacional Ocasional
+342,69,Hombre,Sevilla,B2C,3,4,7.6,0.23,14,0,0.75,1,123.53,0.47,Merchandising,1,1,1,1,2,0,1,0,Joven Digital
+343,50,Mujer,Sevilla,B2C,6,8,0.9,0.64,17,0,0.42,1,62.96,0.69,Merchandising,0,0,0,16,2,0,1,1,Fiel Tradicional
+344,31,Hombre,Sevilla,B2C,4,14,5.0,0.29,24,0,0.52,2,60.77,0.44,Entradas,0,0,0,14,1,0,0,2,Internacional Ocasional
+345,56,Hombre,Sevilla,B2C,5,12,3.8,0.64,20,1,0.37,1,46.75,5.03,Abonos,0,0,0,17,9,0,0,1,Internacional Ocasional
+346,51,Hombre,Andalucía,B2C,3,4,4.9,0.24,19,0,0.74,2,84.24,2.02,Merchandising,0,0,0,9,0,1,1,3,Corporativo
+347,48,Mujer,Andalucía,B2C,7,8,3.0,0.33,14,1,0.78,2,96.99,0.22,Abonos,1,1,0,5,8,0,0,1,Fiel Tradicional
+348,19,Hombre,España,B2C,3,13,3.9,0.43,11,0,0.76,3,59.6,0.01,Abonos,0,0,1,15,5,0,1,4,Internacional Ocasional
+349,48,Hombre,España,B2C,6,13,5.1,0.76,15,0,0.72,5,70.75,0.05,Abonos,0,1,0,4,5,0,0,2,Joven Digital
+350,29,Hombre,Sevilla,B2C,7,9,8.7,0.75,18,0,0.2,2,13.39,0.34,Entradas,1,0,0,11,7,1,0,0,Corporativo
+351,36,Hombre,Sevilla,B2C,1,7,5.2,0.24,25,0,0.34,2,120.28,0.15,Abonos,1,0,0,5,10,1,0,3,Corporativo
+352,63,Mujer,Sevilla,B2B,6,11,2.7,0.35,20,1,0.47,1,28.05,0.91,Abonos,1,1,0,13,4,1,0,0,Internacional Ocasional
+353,35,Mujer,Andalucía,B2C,4,10,3.4,0.2,22,1,0.33,4,86.24,2.34,Digital,0,0,0,15,8,0,0,1,Fiel Tradicional
+354,23,Hombre,Sevilla,B2C,2,11,3.3,0.46,22,0,0.75,2,82.15,1.6,Digital,0,1,0,6,14,0,0,3,Corporativo
+355,22,Mujer,Andalucía,B2C,2,10,1.3,0.42,21,1,0.33,2,76.37,0.29,Digital,0,0,0,1,10,0,0,0,Fiel Tradicional
+356,18,Hombre,Andalucía,B2C,5,7,3.5,0.73,16,1,0.14,0,77.06,0.61,Merchandising,0,0,0,5,4,0,0,4,Internacional Ocasional
+357,32,Hombre,Andalucía,B2C,5,8,5.1,0.75,17,1,0.4,1,44.65,0.85,Merchandising,1,0,1,8,1,0,0,0,Internacional Ocasional
+358,48,Hombre,Andalucía,B2B,3,10,2.1,0.37,15,1,0.98,1,65.16,1.99,Digital,0,1,0,6,5,0,0,4,Fiel Tradicional
+359,63,Mujer,Sevilla,B2C,5,7,5.6,0.44,24,1,0.23,1,104.07,2.19,Entradas,1,1,0,1,14,0,0,2,Joven Digital
+360,27,Mujer,Internacional,B2C,11,14,4.7,0.73,20,1,0.61,2,112.95,2.89,Entradas,0,0,0,18,8,0,1,2,Corporativo
+361,66,Mujer,España,B2C,2,14,2.9,0.66,23,1,0.43,3,62.37,0.85,Digital,1,0,0,7,2,0,0,2,Internacional Ocasional
+362,37,Mujer,Sevilla,B2B,6,11,3.8,0.1,17,0,0.07,3,28.19,1.42,Merchandising,0,0,0,10,9,1,0,1,Joven Digital
+363,37,Mujer,España,B2C,5,10,6.4,0.32,21,1,0.49,4,51.64,0.14,Merchandising,1,0,1,3,3,0,1,1,Joven Digital
+364,61,Mujer,Andalucía,B2C,3,11,5.1,0.4,17,1,0.7,3,130.58,1.0,Entradas,0,1,0,15,9,1,0,0,Fiel Tradicional
+365,45,Mujer,España,B2C,4,9,4.0,0.26,14,1,0.51,1,53.43,0.34,Abonos,0,0,0,17,10,0,1,4,Fiel Tradicional
+366,53,Mujer,España,B2C,10,10,3.6,0.24,19,1,0.87,3,72.08,0.68,Entradas,1,1,0,12,7,0,1,1,Fiel Tradicional
+367,53,Mujer,Andalucía,B2B,1,6,4.1,0.13,26,1,0.29,1,117.48,1.21,Abonos,0,0,0,4,5,0,0,0,Joven Digital
+368,60,Hombre,Sevilla,B2B,8,10,3.2,0.55,20,0,0.09,2,59.19,0.36,Merchandising,0,1,0,1,12,1,0,1,Corporativo
+369,66,Mujer,Sevilla,B2C,3,5,0.8,0.28,22,1,0.94,0,70.03,0.06,Merchandising,1,0,1,10,6,0,0,1,Fiel Tradicional
+370,69,Mujer,Andalucía,B2B,5,11,7.1,0.14,14,1,0.38,1,98.83,0.01,Digital,0,0,0,0,6,1,0,1,Corporativo
+371,23,Mujer,Andalucía,B2C,4,5,4.2,0.26,22,1,0.58,1,126.35,0.03,Merchandising,0,1,0,12,3,0,0,0,Fiel Tradicional
+372,42,Mujer,Sevilla,B2B,11,7,4.6,0.66,15,1,0.79,4,55.63,0.01,Abonos,0,0,0,4,14,0,0,1,Joven Digital
+373,42,Mujer,Sevilla,B2C,3,7,3.9,0.7,29,1,0.32,1,116.76,0.14,Entradas,1,1,0,17,11,1,1,2,Corporativo
+374,49,Mujer,España,B2C,4,16,2.9,0.44,24,0,0.72,2,66.55,0.33,Digital,0,1,0,13,5,0,0,3,Corporativo
+375,36,Mujer,Internacional,B2C,3,8,3.7,0.39,21,1,0.14,2,48.42,0.3,Abonos,0,0,1,12,11,1,0,1,Joven Digital
+376,45,Mujer,Andalucía,B2C,3,8,1.6,0.78,17,1,0.29,1,82.49,5.19,Entradas,0,0,0,6,8,0,1,0,Corporativo
+377,48,Mujer,Sevilla,B2C,8,16,7.4,0.24,20,1,0.14,3,40.27,0.44,Entradas,0,0,1,7,2,0,0,2,Joven Digital
+378,43,Mujer,Sevilla,B2C,1,12,2.1,0.25,18,0,0.81,4,89.16,0.16,Entradas,0,0,0,17,7,1,0,2,Joven Digital
+379,62,Mujer,Sevilla,B2C,5,21,2.5,0.3,18,1,0.22,0,169.49,0.95,Merchandising,0,0,0,6,6,1,0,1,Internacional Ocasional
+380,48,Hombre,Internacional,B2C,7,13,3.3,0.22,27,1,0.72,2,108.17,2.34,Entradas,0,0,0,19,3,0,0,0,Fiel Tradicional
+381,20,Hombre,Sevilla,B2C,3,11,5.9,0.37,18,1,0.94,2,71.85,1.36,Merchandising,0,0,0,16,9,1,1,1,Internacional Ocasional
+382,63,Mujer,Andalucía,B2C,7,15,4.0,0.74,22,1,0.53,5,106.57,0.42,Entradas,0,0,1,15,12,0,0,2,Joven Digital
+383,34,Mujer,Sevilla,B2B,5,13,2.1,0.53,28,1,0.54,2,47.05,0.99,Entradas,0,0,0,10,2,1,0,0,Joven Digital
+384,19,Hombre,Andalucía,B2C,7,10,5.9,0.39,30,0,0.46,2,52.09,1.51,Merchandising,0,0,0,18,13,0,0,4,Corporativo
+385,50,Mujer,Andalucía,B2C,5,9,5.1,0.75,21,0,0.33,4,72.69,1.56,Merchandising,0,0,0,0,6,0,0,0,Joven Digital
+386,64,Hombre,España,B2C,7,16,4.8,0.13,27,1,0.48,1,77.63,1.32,Abonos,0,0,0,7,9,0,0,4,Joven Digital
+387,32,Hombre,Sevilla,B2B,5,8,5.1,0.25,22,1,0.6,4,36.2,2.46,Entradas,0,0,0,0,8,0,1,3,Joven Digital
+388,59,Hombre,Sevilla,B2C,4,9,7.6,0.5,15,0,0.99,3,65.81,2.45,Merchandising,0,0,0,8,11,0,1,1,Fiel Tradicional
+389,43,Hombre,Sevilla,B2C,5,9,7.3,0.53,26,0,0.94,6,70.66,1.04,Abonos,0,0,0,18,9,0,0,0,Internacional Ocasional
+390,45,Hombre,Internacional,B2C,11,12,3.0,0.13,14,0,0.86,0,121.26,0.67,Abonos,0,0,0,8,2,0,0,1,Internacional Ocasional
+391,44,Mujer,España,B2B,7,8,6.4,0.38,21,1,0.89,3,36.2,1.23,Merchandising,0,1,0,9,14,1,1,1,Fiel Tradicional
+392,61,Hombre,Andalucía,B2C,6,6,4.6,0.55,17,0,0.47,1,33.42,2.05,Entradas,0,0,0,10,9,0,0,3,Fiel Tradicional
+393,68,Mujer,Andalucía,B2C,3,9,4.7,0.59,19,1,0.66,1,80.27,0.01,Abonos,0,0,1,0,8,0,0,3,Fiel Tradicional
+394,21,Mujer,Andalucía,B2C,0,13,1.5,0.55,20,1,0.9,2,109.53,5.79,Entradas,1,1,0,19,12,0,0,0,Internacional Ocasional
+395,50,Hombre,Sevilla,B2B,10,9,3.7,0.32,23,0,0.39,2,91.55,0.24,Entradas,0,1,1,7,7,1,0,1,Internacional Ocasional
+396,56,Hombre,Internacional,B2C,5,14,2.8,0.17,16,1,0.96,1,84.08,0.76,Abonos,0,0,0,19,11,0,0,2,Joven Digital
+397,52,Mujer,Andalucía,B2C,5,10,5.2,0.4,23,0,0.42,2,66.34,2.47,Merchandising,0,0,0,11,2,0,1,1,Internacional Ocasional
+398,39,Hombre,Sevilla,B2B,3,13,5.6,0.19,19,1,0.6,3,95.28,0.31,Entradas,0,0,0,0,14,0,1,3,Corporativo
+399,44,Hombre,Andalucía,B2C,4,9,0.9,0.76,24,0,0.71,2,99.81,0.78,Digital,0,0,0,9,7,0,0,2,Internacional Ocasional
+400,64,Mujer,Sevilla,B2C,2,10,4.0,0.43,22,1,0.95,2,67.28,0.17,Merchandising,0,1,1,3,11,0,0,2,Fiel Tradicional
+401,61,Mujer,Sevilla,B2C,2,13,5.7,0.32,17,1,0.24,4,46.54,0.6,Abonos,1,0,0,14,3,0,1,0,Internacional Ocasional
+402,68,Hombre,España,B2C,7,7,3.7,0.64,14,0,0.75,1,46.74,0.23,Digital,0,1,0,18,5,0,0,1,Joven Digital
+403,46,Mujer,Sevilla,B2C,3,7,5.1,0.45,16,0,0.52,0,101.36,0.54,Entradas,0,0,0,5,11,0,1,2,Internacional Ocasional
+404,50,Hombre,Andalucía,B2C,1,11,4.5,0.32,27,1,0.27,3,28.67,0.56,Merchandising,0,1,0,4,9,0,0,1,Fiel Tradicional
+405,48,Hombre,Sevilla,B2C,3,11,4.5,0.67,23,0,0.78,2,125.31,5.98,Digital,0,0,0,4,1,0,0,1,Corporativo
+406,67,Hombre,Sevilla,B2C,7,8,3.6,0.71,21,1,0.55,5,61.32,6.31,Merchandising,0,0,0,17,7,0,0,1,Fiel Tradicional
+407,36,Mujer,Sevilla,B2B,5,11,2.2,0.57,24,1,0.66,3,84.29,0.15,Entradas,0,0,0,2,12,1,1,6,Corporativo
+408,47,Mujer,Sevilla,B2C,5,11,2.3,0.13,23,1,0.32,7,96.05,1.55,Merchandising,0,0,0,1,8,1,0,0,Joven Digital
+409,38,Mujer,España,B2B,4,12,5.1,0.5,25,1,0.48,1,54.49,0.06,Digital,0,0,0,3,6,0,0,0,Joven Digital
+410,48,Mujer,Sevilla,B2C,5,7,4.0,0.63,22,1,0.62,4,61.2,0.04,Merchandising,1,1,0,17,7,0,0,2,Internacional Ocasional
+411,18,Mujer,Andalucía,B2B,5,6,3.8,0.2,22,1,0.4,1,78.96,0.13,Abonos,0,0,0,8,6,0,1,5,Joven Digital
+412,33,Hombre,Andalucía,B2C,3,18,3.4,0.26,20,1,0.2,2,49.39,4.04,Abonos,1,1,0,18,10,0,1,1,Joven Digital
+413,40,Hombre,Andalucía,B2C,3,7,3.5,0.72,19,0,0.96,4,42.97,3.39,Digital,0,0,0,9,9,0,1,1,Fiel Tradicional
+414,57,Hombre,Internacional,B2C,6,13,5.6,0.11,20,0,0.51,2,45.67,0.26,Merchandising,0,0,0,14,3,0,1,3,Fiel Tradicional
+415,46,Hombre,España,B2B,6,11,3.5,0.63,24,1,0.73,0,111.27,0.21,Digital,1,1,0,0,0,1,0,1,Internacional Ocasional
+416,69,Mujer,Sevilla,B2C,4,14,2.0,0.43,16,1,0.41,2,86.94,0.33,Merchandising,0,0,0,10,2,1,0,0,Internacional Ocasional
+417,18,Hombre,Sevilla,B2C,9,11,5.1,0.41,25,1,0.36,2,51.2,0.87,Entradas,1,0,0,13,6,0,0,1,Internacional Ocasional
+418,55,Mujer,Sevilla,B2C,6,18,3.7,0.1,20,0,0.41,0,101.18,1.01,Abonos,0,0,0,9,10,0,0,0,Internacional Ocasional
+419,61,Hombre,Andalucía,B2C,5,11,4.0,0.67,18,1,0.41,1,52.87,0.3,Entradas,0,0,0,18,10,1,1,1,Fiel Tradicional
+420,39,Mujer,Sevilla,B2C,5,12,6.4,0.35,16,0,0.54,3,16.49,1.7,Merchandising,0,1,1,15,6,1,1,3,Internacional Ocasional
+421,65,Mujer,Andalucía,B2C,4,7,4.0,0.48,24,0,0.54,0,95.9,0.44,Entradas,0,0,1,7,10,1,0,1,Internacional Ocasional
+422,47,Hombre,Andalucía,B2C,10,15,4.4,0.57,17,1,0.5,1,124.39,3.06,Digital,1,0,0,1,12,0,1,2,Joven Digital
+423,62,Hombre,Sevilla,B2C,6,6,2.2,0.59,19,0,0.13,1,91.74,1.28,Digital,1,1,0,6,2,0,1,2,Internacional Ocasional
+424,37,Hombre,España,B2C,2,6,3.7,0.77,23,1,0.5,2,18.38,0.69,Merchandising,0,0,1,18,0,0,0,2,Corporativo
+425,38,Hombre,Sevilla,B2C,4,7,4.9,0.47,26,0,0.17,0,74.29,1.87,Abonos,0,0,0,6,9,0,0,1,Joven Digital
+426,17,Mujer,Sevilla,B2C,3,12,1.7,0.38,14,1,0.13,0,66.76,2.04,Digital,0,1,0,14,8,0,0,2,Fiel Tradicional
+427,42,Hombre,España,B2C,2,13,4.3,0.77,31,1,0.93,0,86.35,0.41,Abonos,0,0,0,7,11,0,0,1,Corporativo
+428,57,Hombre,Andalucía,B2C,5,9,4.2,0.55,24,0,0.6,3,49.58,0.5,Merchandising,0,1,0,13,5,1,0,0,Internacional Ocasional
+429,17,Mujer,Andalucía,B2C,6,8,4.1,0.31,18,0,0.66,3,65.0,3.3,Abonos,0,0,0,0,12,1,0,0,Joven Digital
+430,41,Hombre,Andalucía,B2C,5,11,5.6,0.19,20,1,0.4,0,32.4,0.22,Merchandising,0,1,1,12,12,0,0,3,Internacional Ocasional
+431,32,Hombre,Sevilla,B2C,10,15,4.5,0.69,22,1,0.91,2,81.65,0.05,Entradas,0,1,0,2,11,1,1,2,Joven Digital
+432,55,Hombre,España,B2C,5,15,6.2,0.35,30,1,0.64,3,33.51,0.73,Merchandising,1,0,0,5,6,0,0,1,Internacional Ocasional
+433,48,Hombre,España,B2C,5,12,2.5,0.56,32,0,0.77,5,88.12,1.94,Entradas,1,0,0,18,0,1,0,0,Corporativo
+434,24,Hombre,Andalucía,B2C,4,7,4.2,0.43,20,1,0.37,3,52.48,1.77,Merchandising,1,0,0,14,0,0,1,2,Fiel Tradicional
+435,58,Mujer,Sevilla,B2C,4,5,4.1,0.24,19,1,0.96,1,0.0,3.02,Digital,1,1,0,3,3,0,0,1,Corporativo
+436,69,Hombre,Andalucía,B2C,3,5,2.4,0.52,19,1,0.82,3,98.81,0.91,Digital,0,0,0,2,6,0,0,1,Corporativo
+437,63,Hombre,Sevilla,B2C,6,13,5.4,0.14,23,1,0.85,2,89.82,0.13,Abonos,0,0,0,3,13,0,1,1,Fiel Tradicional
+438,54,Hombre,Sevilla,B2C,4,6,7.5,0.39,25,0,0.17,0,115.59,1.07,Merchandising,0,0,1,4,10,0,0,2,Joven Digital
+439,44,Hombre,Internacional,B2C,2,7,4.0,0.48,21,0,0.27,2,12.3,1.81,Merchandising,1,1,0,17,14,0,1,3,Joven Digital
+440,57,Hombre,Sevilla,B2C,9,13,4.8,0.41,18,1,0.29,4,55.36,0.12,Merchandising,1,0,0,9,10,1,0,3,Fiel Tradicional
+441,41,Mujer,Internacional,B2C,5,11,4.1,0.62,17,1,0.27,3,78.95,0.23,Abonos,0,0,0,7,7,0,0,0,Internacional Ocasional
+442,50,Hombre,Andalucía,B2B,9,12,2.9,0.68,16,0,0.86,2,92.15,0.01,Digital,1,0,0,11,9,0,0,2,Joven Digital
+443,65,Mujer,Sevilla,B2C,5,11,1.3,0.64,22,1,0.03,3,31.11,1.08,Merchandising,0,0,0,2,8,0,0,3,Corporativo
+444,40,Mujer,Andalucía,B2C,5,15,2.9,0.13,30,0,0.08,3,87.94,2.61,Abonos,0,0,1,17,0,0,1,3,Fiel Tradicional
+445,39,Hombre,España,B2C,1,6,1.9,0.24,26,0,0.27,1,57.85,1.33,Merchandising,0,0,1,7,3,0,1,2,Corporativo
+446,28,Hombre,España,B2C,5,15,6.6,0.48,20,0,0.2,1,19.35,4.82,Entradas,0,1,0,0,3,1,1,1,Joven Digital
+447,22,Hombre,España,B2C,8,11,3.8,0.75,12,0,0.23,5,52.48,0.08,Merchandising,0,1,0,13,2,0,1,2,Fiel Tradicional
+448,51,Hombre,Andalucía,B2C,6,9,3.5,0.68,19,1,0.8,2,90.43,2.8,Entradas,0,0,0,12,6,0,0,2,Fiel Tradicional
+449,60,Mujer,Andalucía,B2C,2,16,5.3,0.69,18,1,0.56,4,20.6,2.02,Abonos,0,0,0,11,0,1,1,1,Joven Digital
+450,35,Hombre,España,B2C,5,14,2.3,0.31,24,0,0.01,4,94.11,0.45,Abonos,0,0,0,2,8,0,1,1,Joven Digital
+451,16,Hombre,Sevilla,B2C,5,7,2.8,0.4,15,0,0.43,2,83.5,4.36,Digital,0,0,1,17,12,0,1,1,Fiel Tradicional
+452,23,Hombre,Andalucía,B2C,4,8,4.1,0.43,23,1,0.41,2,67.38,0.41,Merchandising,0,0,0,12,7,1,1,3,Internacional Ocasional
+453,61,Hombre,Sevilla,B2C,6,11,5.5,0.21,20,0,0.11,3,25.94,2.64,Abonos,0,0,0,14,1,0,0,1,Fiel Tradicional
+454,31,Hombre,Internacional,B2C,5,7,4.8,0.12,19,1,0.68,4,28.35,2.55,Digital,0,0,0,9,1,0,0,0,Internacional Ocasional
+455,29,Hombre,Internacional,B2B,6,11,4.4,0.76,23,0,0.7,1,63.05,1.7,Merchandising,0,1,0,0,7,1,1,1,Corporativo
+456,27,Mujer,Sevilla,B2C,5,13,4.1,0.27,15,1,0.72,2,41.25,0.99,Abonos,1,1,0,5,10,0,0,5,Internacional Ocasional
+457,66,Mujer,España,B2C,4,11,4.6,0.27,17,0,0.73,1,64.99,0.15,Entradas,0,0,0,8,13,0,0,0,Internacional Ocasional
+458,38,Hombre,Internacional,B2C,7,11,4.3,0.16,14,0,0.0,6,102.19,0.91,Abonos,0,0,0,9,14,1,1,0,Joven Digital
+459,30,Hombre,Sevilla,B2C,5,8,2.5,0.75,17,0,0.95,2,66.81,0.53,Entradas,1,1,0,14,0,0,0,1,Fiel Tradicional
+460,43,Hombre,Andalucía,B2B,7,8,4.1,0.51,26,0,0.81,2,65.99,1.89,Digital,1,1,0,8,12,0,0,3,Corporativo
+461,49,Mujer,Internacional,B2C,6,10,2.4,0.57,24,1,0.9,1,66.01,1.7,Digital,1,0,0,13,6,1,0,1,Fiel Tradicional
+462,17,Hombre,Sevilla,B2B,4,18,4.1,0.74,22,1,0.02,4,105.4,2.9,Merchandising,0,0,0,10,8,1,1,1,Internacional Ocasional
+463,47,Mujer,Andalucía,B2C,8,8,3.3,0.34,19,0,0.93,2,113.8,0.02,Merchandising,0,0,1,6,11,0,0,1,Internacional Ocasional
+464,38,Hombre,Sevilla,B2B,4,8,7.8,0.54,20,0,0.81,3,87.66,1.99,Merchandising,0,0,0,1,14,0,1,0,Internacional Ocasional
+465,37,Hombre,Internacional,B2C,3,9,3.9,0.13,14,1,0.84,1,79.1,3.35,Digital,0,0,0,13,2,1,0,1,Fiel Tradicional
+466,66,Hombre,Internacional,B2C,5,11,1.9,0.23,22,1,0.09,4,81.89,1.87,Entradas,1,0,0,5,6,1,0,1,Internacional Ocasional
+467,40,Hombre,Internacional,B2C,10,13,3.8,0.68,30,1,0.74,4,117.84,0.17,Merchandising,0,0,0,4,5,0,0,1,Fiel Tradicional
+468,37,Mujer,Andalucía,B2C,6,4,4.8,0.64,17,1,0.96,0,89.29,0.1,Merchandising,0,0,0,4,14,0,1,1,Corporativo
+469,37,Mujer,España,B2C,4,6,6.5,0.35,20,1,0.68,8,120.67,0.03,Digital,0,0,0,18,6,0,0,1,Corporativo
+470,64,Hombre,España,B2C,3,16,3.1,0.36,24,1,0.57,3,62.43,1.19,Entradas,0,1,0,18,6,1,1,0,Fiel Tradicional
+471,67,Hombre,Sevilla,B2C,3,14,1.6,0.47,23,1,0.95,2,34.93,1.19,Abonos,0,0,0,5,9,1,1,1,Corporativo
+472,57,Mujer,España,B2C,5,12,5.2,0.1,19,1,0.44,3,54.93,5.2,Merchandising,0,0,0,9,0,1,1,1,Joven Digital
+473,21,Mujer,Sevilla,B2C,2,6,1.9,0.27,32,0,0.6,0,58.12,0.61,Abonos,1,0,0,13,13,1,1,1,Internacional Ocasional
+474,30,Mujer,Andalucía,B2C,6,11,3.3,0.25,19,0,0.48,2,123.14,0.48,Abonos,1,0,0,16,2,0,0,1,Internacional Ocasional
+475,69,Mujer,Sevilla,B2C,2,9,3.6,0.28,18,0,0.93,2,97.09,1.18,Merchandising,0,0,0,2,9,0,0,4,Internacional Ocasional
+476,58,Hombre,Sevilla,B2C,5,13,3.9,0.66,19,1,0.08,1,55.88,2.1,Digital,0,0,0,0,0,1,1,0,Joven Digital
+477,52,Mujer,Sevilla,B2C,2,13,5.0,0.3,20,1,0.5,3,99.25,3.31,Merchandising,0,0,0,9,4,1,1,0,Internacional Ocasional
+478,48,Hombre,Andalucía,B2C,6,14,3.0,0.23,22,1,0.69,2,71.11,1.95,Entradas,0,0,0,2,2,0,1,1,Fiel Tradicional
+479,23,Mujer,Sevilla,B2C,3,11,3.6,0.45,16,0,0.79,2,124.04,0.67,Entradas,1,0,0,4,0,0,1,0,Internacional Ocasional
+480,68,Mujer,España,B2C,5,9,4.0,0.71,9,1,0.58,2,64.99,1.21,Merchandising,0,1,1,18,1,1,1,1,Fiel Tradicional
+481,59,Mujer,Sevilla,B2C,2,5,4.2,0.27,17,1,0.91,3,28.83,2.33,Abonos,0,0,1,9,9,0,0,0,Corporativo
+482,59,Mujer,Sevilla,B2C,6,14,4.1,0.15,20,0,0.94,3,69.4,0.81,Entradas,0,0,0,15,4,0,1,2,Fiel Tradicional
+483,20,Mujer,Andalucía,B2C,6,7,4.7,0.35,26,1,0.06,3,65.01,0.29,Entradas,0,0,0,0,10,0,1,2,Fiel Tradicional
+484,54,Hombre,España,B2C,7,8,5.3,0.62,18,1,0.4,1,34.7,0.22,Merchandising,0,0,0,5,2,0,1,1,Fiel Tradicional
+485,19,Hombre,Sevilla,B2C,6,9,4.6,0.49,18,1,0.02,2,92.58,0.0,Merchandising,0,0,0,8,5,0,0,1,Internacional Ocasional
+486,21,Mujer,Andalucía,B2C,6,6,4.7,0.67,22,1,0.33,3,117.74,1.52,Digital,0,0,0,4,8,1,1,0,Joven Digital
+487,60,Mujer,España,B2B,4,9,1.6,0.77,21,1,0.54,0,41.33,0.14,Merchandising,0,1,0,13,5,0,1,0,Joven Digital
+488,47,Hombre,Andalucía,B2C,4,12,4.1,0.65,15,1,0.91,3,104.18,0.34,Merchandising,0,1,0,9,1,0,0,3,Fiel Tradicional
+489,67,Mujer,Sevilla,B2C,7,12,4.7,0.52,29,1,0.85,1,56.8,0.42,Entradas,1,0,0,1,1,0,1,3,Internacional Ocasional
+490,45,Mujer,Sevilla,B2C,5,13,5.1,0.45,22,1,0.13,1,74.26,0.99,Entradas,0,1,0,4,14,1,0,1,Joven Digital
+491,62,Hombre,España,B2C,5,7,3.0,0.13,14,0,0.09,0,71.11,0.61,Entradas,0,0,0,0,12,1,1,0,Corporativo
+492,50,Mujer,Sevilla,B2C,8,11,3.0,0.79,17,1,0.59,2,74.26,1.35,Abonos,0,1,0,9,12,1,0,3,Corporativo
+493,55,Mujer,España,B2B,4,9,3.1,0.37,15,0,0.53,3,89.19,0.07,Entradas,0,0,0,8,7,1,0,2,Internacional Ocasional
+494,67,Hombre,Andalucía,B2C,2,14,4.8,0.21,18,0,0.27,2,44.27,0.16,Entradas,1,0,0,2,10,0,0,0,Corporativo
+495,31,Hombre,Internacional,B2C,3,9,5.6,0.57,21,1,0.9,4,113.8,0.83,Merchandising,1,0,0,14,7,0,1,3,Corporativo
+496,28,Hombre,España,B2B,4,7,3.4,0.3,17,1,0.93,1,90.11,0.49,Digital,0,0,0,3,5,0,0,0,Corporativo
+497,65,Mujer,Internacional,B2C,6,10,5.4,0.51,26,1,0.4,2,100.07,0.42,Entradas,0,1,0,12,9,0,1,2,Joven Digital
+498,57,Hombre,Sevilla,B2C,9,13,4.2,0.51,18,0,0.89,1,51.6,0.08,Digital,0,1,0,5,6,1,1,2,Corporativo
+499,45,Hombre,España,B2C,3,12,3.8,0.41,18,0,0.38,2,41.56,2.71,Entradas,0,0,0,19,0,0,1,0,Fiel Tradicional
+500,34,Hombre,Andalucía,B2C,5,10,3.7,0.69,21,0,0.74,4,110.48,1.41,Entradas,0,1,0,16,14,1,0,2,Fiel Tradicional
