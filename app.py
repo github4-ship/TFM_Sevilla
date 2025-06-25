@@ -8,6 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 
+
 # ========== BLOQUE 1: CARGA DE DATOS ==========
 @st.cache_data
 def load_data():
