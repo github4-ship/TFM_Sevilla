@@ -1,12 +1,12 @@
-# app.py
+# app_CON_Radar.py
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import numpy as np
 
 # Cargar datos
 @st.cache_data
-
 def load_data():
     df = pd.read_csv("CSV_Corregido_para_App.csv")
     return df
@@ -18,6 +18,11 @@ for col in df_fans.columns:
     if df_fans[col].dtype == object:
         df_fans[col] = df_fans[col].replace("np.int64(.*)", "", regex=True)
         df_fans[col] = df_fans[col].replace("N/A", np.nan)
+
+# Convertir numéricos donde aplique
+numericas = ["Fan_Score", "visitas_app", "Interacciones_RRSS", "Compras_Ecommerce", "Gasto_Total_€"]
+for col in numericas:
+    df_fans[col] = pd.to_numeric(df_fans[col], errors="coerce")
 
 # Configuración de página
 st.set_page_config(page_title="Segmentación Avanzada", layout="wide")
@@ -61,6 +66,36 @@ elif opcion == "Detalle por Fan":
                      "Miembro_Programa_Fidelidad", "Gasto_Total_€"]
     dict_metrica = {col: fan_data.get(col, "N/A") for col in cols_advanced}
     st.json(dict_metrica)
+
+    # ➕ Añadir radar chart
+    st.subheader("📊 Perfil Comparado (Radar)")
+    radar_cols = ["Fan_Score", "visitas_app", "Interacciones_RRSS", "Compras_Ecommerce", "Gasto_Total_€"]
+    valores_fan = fan_data[radar_cols].values.astype(float)
+
+    if not np.isnan(valores_fan).any():
+        maximos = df_fans[radar_cols].max()
+        normales = valores_fan / maximos
+
+        fig_radar = go.Figure()
+        fig_radar.add_trace(go.Scatterpolar(
+            r=normales,
+            theta=radar_cols,
+            fill='toself',
+            name=f"Fan {fan_id}",
+            line_color='gold'
+        ))
+
+        fig_radar.update_layout(
+            polar=dict(
+                radialaxis=dict(visible=True, range=[0, 1], showticklabels=False),
+            ),
+            showlegend=False,
+            template="plotly_dark",
+            height=400
+        )
+        st.plotly_chart(fig_radar, use_container_width=True)
+    else:
+        st.warning("Datos insuficientes para mostrar radar.")
 
 # 4. Segmentación avanzada
 elif opcion == "Segmentación avanzada":
