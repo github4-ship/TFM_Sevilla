@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import numpy as np
 
 # =======================
 # BLOQUE 2: CARGA DE DATOS
@@ -45,21 +46,20 @@ seccion = st.sidebar.radio("Selecciona una sección:", ["Resumen General", "Clus
 if seccion == "Resumen General":
     st.title("📈 Análisis General de la Base de Fans")
 
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     col1.metric("Total Fans", len(df_fans))
-    col2.metric("Fan Score Medio", round(df_fans["Fan_Score"].mean(), 2))
-    col3.metric("Prob. Media de Churn", f'{df_fans["Prob_Churn"].mean():.2%}')
+    col2.metric("Gasto Total Medio", f"{df_fans['gasto_total'].mean():.2f} €")
 
-    st.subheader("🎯 Distribución por Nivel de Fan")
-    fig1 = px.histogram(df_fans, x="Nivel_Fan", color="Nivel_Fan", title="Distribución de Segmentos")
+    st.subheader("🎯 Distribución por Cluster")
+    fig1 = px.histogram(df_fans, x="cluster_marketing", color="cluster_marketing", title="Distribución de Clusters")
     st.plotly_chart(fig1, use_container_width=True)
 
-    st.subheader("🧠 Engagement Digital (GA4)")
-    fig2 = px.box(df_fans, x="Nivel_Fan", y="Engagement_GA4", color="Nivel_Fan")
+    st.subheader("🧠 Interacciones en Redes Sociales")
+    fig2 = px.box(df_fans, x="cluster_marketing", y="interacciones_redes", color="cluster_marketing")
     st.plotly_chart(fig2, use_container_width=True)
 
-    st.subheader("🛍️ Gasto Total por Nivel de Fan")
-    fig3 = px.box(df_fans, x="Nivel_Fan", y="Gasto_Total_€", color="Nivel_Fan")
+    st.subheader("🛍️ Gasto Total por Cluster")
+    fig3 = px.box(df_fans, x="cluster_marketing", y="gasto_total", color="cluster_marketing")
     st.plotly_chart(fig3, use_container_width=True)
 
 # =======================
@@ -71,13 +71,11 @@ elif seccion == "Clusters":
     st.dataframe(resumen_clusters)
 
     st.subheader("💡 Radar Comparativo de Métricas")
-    import numpy as np
+    cluster_id = st.selectbox("Selecciona un cluster", resumen_clusters["cluster_marketing"].unique())
 
-    cluster_id = st.selectbox("Selecciona un cluster", resumen_clusters["Cluster"].unique())
-    metrics = ["Fan_Score", "Frecuencia_Visitas_Web", "Interacciones_RRSS",
-               "Compras_Ecommerce", "Gasto_Total_€", "Miembro_Programa_Fidelidad"]
-
-    cluster_vals = resumen_clusters[resumen_clusters["Cluster"] == cluster_id][metrics].values.flatten()
+    # Asegúrate de que estas métricas existan en el CSV resumen_clusters
+    metrics = [col for col in resumen_clusters.columns if col not in ["cluster_marketing"]]
+    cluster_vals = resumen_clusters[resumen_clusters["cluster_marketing"] == cluster_id][metrics].values.flatten()
     max_vals = resumen_clusters[metrics].max().values
     norm_vals = cluster_vals / max_vals
 
@@ -97,23 +95,21 @@ elif seccion == "Clusters":
 elif seccion == "Detalle por Fan":
     st.title("👤 Análisis Individual")
 
-    fan_id = st.selectbox("Selecciona un Fan_ID", df_fans["Fan_ID"].unique())
-    fan = df_fans[df_fans["Fan_ID"] == fan_id].iloc[0]
+    fan_id = st.selectbox("Selecciona un fan_id", df_fans["fan_id"].unique())
+    fan = df_fans[df_fans["fan_id"] == fan_id].iloc[0]
 
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Fan Score", round(fan["Fan_Score"], 2))
-    col2.metric("Nivel", fan["Nivel_Fan"])
-    col3.metric("Cluster", fan["Cluster"])
+    col1, col2 = st.columns(2)
+    col1.metric("Gasto Total (€)", round(fan["gasto_total"], 2))
+    col2.metric("Cluster", fan["cluster_marketing"])
 
     st.subheader("⚙️ Métricas Avanzadas")
     st.write({
-        "Engagement_GA4": fan["Engagement_GA4"],
-        "CRO_Score": fan["CRO_Score"],
-        "Ingresos B2C (€)": fan["Ingresos_B2C_€"],
-        "Ingresos B2B (€)": fan["Ingresos_B2B_€"],
-        "Probabilidad de Churn": fan["Prob_Churn"]
+        "Edad": fan["edad"],
+        "Localidad": fan["localidad"],
+        "Canal": fan["canal"],
+        "Visitas App": fan["visitas_app"],
+        "Interacciones en RRSS": fan["interacciones_redes"],
+        "Clickrate Newsletter": fan["clickrate_newsletter"],
+        "Compras Totales": fan["compras_total"],
+        "Participación en Eventos": fan["participacion_eventos"]
     })
-
-# =======================
-# FIN
-# =======================
