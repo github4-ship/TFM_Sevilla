@@ -117,19 +117,7 @@ elif opcion == "Engagement Digital":
 
 # ========== 6. ANEXO IV – PLAN DE DESPLIEGUE ==========
 elif opcion == "Despliegue Real del Fan Value Engine":
-    st.header("📘 Anexo IV – Plan de Despliegue del Fan Value Engine")
-
-    st.markdown("### Fase 1: Integración de Datos")
-    st.markdown("- Conexión con CRM y GA4\n- Validación con fans reales\n- Revisión de calidad de datos")
-
-    st.markdown("### Fase 2: Automatización y Personalización")
-    st.markdown("- Segmentación automática\n- Integración con herramientas de marketing automation\n- Test A/B sobre segmentos")
-
-    st.markdown("### Fase 3: Escalado Multiequipo")
-    st.markdown("- Expansión a otras secciones del club\n- Paneles específicos para marketing, ventas, fidelización")
-
-    st.markdown("### Fase 4: Evaluación Continua")
-    st.markdown("- KPIs: retención, conversión, ROI\n- Feedback de negocio\n- Iteraciones trimestrales del modelo")
+    
 
     # Gráfico Gantt
     st.subheader("📆 Calendario de Despliegue")
