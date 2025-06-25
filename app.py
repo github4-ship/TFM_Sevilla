@@ -49,35 +49,38 @@ if seccion == "Resumen General":
     col1, col2, col3 = st.columns(3)
     col1.metric("Total Fans", len(df_fans))
     col2.metric("Fan Score Medio", round(df_fans["Fan_Score"].mean(), 2))
-    col3.metric("Prob. Media de Churn", f'{df_fans["Prob_Churn"].mean():.2%}')
+    if "Prob_Churn" in df_fans.columns:
+        col3.metric("Prob. Media de Churn", f'{df_fans["Prob_Churn"].mean():.2%}')
 
-    st.subheader("🎯 Distribución por Clúster")
-    fig1 = px.histogram(df_fans, x="cluster_marketing", color="cluster_marketing",
-                        title="Distribución de Segmentos", color_discrete_sequence=px.colors.qualitative.Set2)
-    st.plotly_chart(fig1, use_container_width=True)
+    st.subheader("🎯 Distribución por Nivel de Fan")
+    if "Nivel_Fan" in df_fans.columns:
+        fig1 = px.histogram(df_fans, x="Nivel_Fan", color="Nivel_Fan", title="Distribución de Segmentos")
+        st.plotly_chart(fig1, use_container_width=True)
 
     st.subheader("🧠 Engagement Digital (GA4)")
-    fig2 = px.box(df_fans, x="cluster_marketing", y="Engagement_GA4", color="cluster_marketing")
-    st.plotly_chart(fig2, use_container_width=True)
+    if "Engagement_GA4" in df_fans.columns:
+        fig2 = px.box(df_fans, x="Nivel_Fan", y="Engagement_GA4", color="Nivel_Fan")
+        st.plotly_chart(fig2, use_container_width=True)
 
-    st.subheader("🛍️ Gasto Total por Cluster")
-    fig3 = px.box(df_fans, x="cluster_marketing", y="Gasto_Total_€", color="cluster_marketing")
-    st.plotly_chart(fig3, use_container_width=True)
+    st.subheader("🛍️ Gasto Total por Nivel de Fan")
+    if "Gasto_Total_€" in df_fans.columns:
+        fig3 = px.box(df_fans, x="Nivel_Fan", y="Gasto_Total_€", color="Nivel_Fan")
+        st.plotly_chart(fig3, use_container_width=True)
 
 # =======================
 # BLOQUE 6: CLUSTERS
 # =======================
 elif seccion == "Clusters":
     st.title("🔬 Segmentación por Clusters")
-
     st.dataframe(resumen_clusters)
 
     st.subheader("💡 Radar Comparativo de Métricas")
-
     cluster_id = st.selectbox("Selecciona un cluster", resumen_clusters["Cluster"].unique())
-    metrics = ["Fan_Score", "Frecuencia_Visitas_Web", "Interacciones_RRSS",
-               "Compras_Ecommerce", "Gasto_Total_€", "Miembro_Programa_Fidelidad"]
 
+    metrics = [
+        "Fan_Score", "Frecuencia_Visitas_Web", "Interacciones_RRSS",
+        "Compras_Ecommerce", "Gasto_Total_€", "Miembro_Programa_Fidelidad"
+    ]
     cluster_vals = resumen_clusters[resumen_clusters["Cluster"] == cluster_id][metrics].values.flatten()
     max_vals = resumen_clusters[metrics].max().values
     norm_vals = cluster_vals / max_vals
@@ -97,24 +100,24 @@ elif seccion == "Clusters":
 # =======================
 elif seccion == "Detalle por Fan":
     st.title("👤 Análisis Individual")
-
     fan_id = st.selectbox("Selecciona un Fan_ID", df_fans["Fan_ID"].unique())
     fan = df_fans[df_fans["Fan_ID"] == fan_id].iloc[0]
 
     col1, col2, col3 = st.columns(3)
     col1.metric("Fan Score", round(fan["Fan_Score"], 2))
-    col2.metric("Edad", fan["Edad"])
-    col3.metric("Cluster", fan["cluster_marketing"])
+    col2.metric("Nivel", fan.get("Nivel_Fan", "N/A"))
+    col3.metric("Cluster", fan.get("Cluster", "N/A"))
 
     st.subheader("⚙️ Métricas Avanzadas")
     st.json({
-        "Localidad": fan["Localidad"],
-        "Canal": fan["Canal"],
-        "Visitas App": fan["Frecuencia_Visitas_Web"],
-        "Interacciones en RRSS": fan["Interacciones_RRSS"],
-        "Clickrate Newsletter": fan["clickrate_newsletter"],
-        "Compras Totales": fan["Compras_Ecommerce"],
-        "Participación en Eventos": fan["participacion_eventos"]
+        "Frecuencia Visitas Web": fan.get("Frecuencia_Visitas_Web", "N/A"),
+        "Interacciones RRSS": fan.get("Interacciones_RRSS", "N/A"),
+        "Clickrate Newsletter": fan.get("Clickrate_Newsletter", "N/A"),
+        "Compras Totales": fan.get("Compras_Ecommerce", "N/A"),
+        "Participación en Eventos": fan.get("Participacion_Eventos", "N/A"),
+        "Miembro Programa Fidelidad": fan.get("Miembro_Programa_Fidelidad", "N/A"),
+        "Gasto Total (€)": fan.get("Gasto_Total_€", "N/A"),
+        "Fan Segment": fan.get("cluster_marketing", "N/A")
     })
 
 # =======================
@@ -124,7 +127,6 @@ elif seccion == "Segmentación avanzada":
     st.title("🎯 Segmentación Avanzada")
 
     st.write("Explora relaciones entre dos métricas para detectar patrones por tipo de fan.")
-
     col_x, col_y = st.columns(2)
     metricas_disp = df_fans.select_dtypes(include=["float", "int"]).columns.tolist()
 
